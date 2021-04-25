@@ -5,10 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MediAssist_Desktop_App.Views.Doctor"
         mc:Ignorable="d"
-       Title="MediAssist/Doctor/Dashboard" Height="750" Width="1200"
+       Title="MediAssist/Doctor/Dashboard" Height="750" Width="1400"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize">
     <Grid>
-        
+        <GridSplitter HorizontalAlignment="Left" Height="721" VerticalAlignment="Top" Width="306" Margin="0,0,0,-0.2" Background="#FF115889"/>
+        <Label Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="177" Width="210" Margin="40,0,0,0" RenderTransformOrigin="0.434,0.531">
+            <Label.Background>
+                <ImageBrush ImageSource="MediAssistProjectLogo.png"/>
+            </Label.Background>
+        </Label>
+        <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Margin="0,182,0,0" VerticalAlignment="Top" Width="306" Height="60" BorderBrush="{x:Null}" FontSize="30" FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="White" Background="{x:Null}"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="0,182,0,0" VerticalAlignment="Top" Height="60" Width="85">
+            <Label.Background>
+                <ImageBrush ImageSource="/MediAssist_Desktop_App;component/Views/Admin/HomeIcon.png" Stretch="Uniform"/>
+            </Label.Background>
+        </Label>
+        <Button x:Name="ProfileBtn" Content="Profile" HorizontalAlignment="Left" Margin="0,247,0,0" VerticalAlignment="Top" Width="306" Height="60" BorderBrush="{x:Null}" FontSize="30" FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="White" Background="{x:Null}"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="0,247,0,0" VerticalAlignment="Top" Height="60" Width="85">
+            <Label.Background>
+                <ImageBrush ImageSource="/MediAssist_Desktop_App;component/Views/Admin/UserProfileIcon.png" Stretch="Uniform"/>
+            </Label.Background>
+        </Label>
+
     </Grid>
 </Window>

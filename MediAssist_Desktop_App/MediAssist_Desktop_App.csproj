@@ -158,5 +158,50 @@
   <ItemGroup>
     <Resource Include="MediAssistProjectIcon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Admin\MediAssistProjectLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Consumer\MediAssistProjectLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\DeliveryMan\MediAssistProjectLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Doctor\MediAssistProjectLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Manager\MediAssistProjectLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Admin\HomeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Consumer\HomeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\DeliveryMan\HomeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Doctor\HomeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Manager\HomeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Admin\UserProfileIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Consumer\UserProfileIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\DeliveryMan\UserProfileIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Doctor\UserProfileIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Manager\UserProfileIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
