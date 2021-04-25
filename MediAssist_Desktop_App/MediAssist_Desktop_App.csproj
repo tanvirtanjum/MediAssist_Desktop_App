@@ -203,5 +203,20 @@
   <ItemGroup>
     <Resource Include="Views\Manager\UserProfileIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\DeliveryMan\NotesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Consumer\NotesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Admin\NotesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Doctor\NotesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Manager\NotesIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
