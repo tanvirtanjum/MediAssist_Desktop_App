@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\App.xaml
-21048972580
+2-198981888
 
-17-111164417
+17-1433517350
 14-788570704
-AdminDash.xaml;LoginView.xaml;
+LoginView.xaml;Views\Admin\AdminDash.xaml;
 
 False
 

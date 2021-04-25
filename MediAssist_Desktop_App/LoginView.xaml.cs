@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MediAssist_Desktop_App.Entity;
 using MediAssist_Desktop_App.Model;
+using MediAssist_Desktop_App.Views.Admin;
 
 namespace MediAssist_Desktop_App
 {

@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 using MediAssist_Desktop_App.Entity;
 using MediAssist_Desktop_App.Model;
 
-namespace MediAssist_Desktop_App
+namespace MediAssist_Desktop_App.Views.Admin
 {
     /// <summary>
     /// Interaction logic for AdminDash.xaml
@@ -27,7 +27,6 @@ namespace MediAssist_Desktop_App
             session = user;
 
             InitializeComponent();
-
         }
     }
 }

@@ -13,5 +13,5 @@ W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\MediAssist_D
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\MediAssist_Desktop_App.pdb
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\LoginView.g.cs
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\LoginView.baml
-W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\AdminDash.g.cs
-W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\AdminDash.baml
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Admin\AdminDash.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Admin\AdminDash.baml

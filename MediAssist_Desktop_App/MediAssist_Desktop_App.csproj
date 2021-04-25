@@ -59,9 +59,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AdminDash.xaml.cs">
-      <DependentUpon>AdminDash.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -76,6 +73,9 @@
     <Compile Include="Model\AccessModel.cs" />
     <Compile Include="Model\DBC.cs" />
     <Compile Include="Entity\Login.cs" />
+    <Compile Include="Views\Admin\AdminDash.xaml.cs">
+      <DependentUpon>AdminDash.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\EmailsModel.cs" />
@@ -108,11 +108,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="AdminDash.xaml">
+    <Page Include="LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LoginView.xaml">
+    <Page Include="Views\Admin\AdminDash.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
