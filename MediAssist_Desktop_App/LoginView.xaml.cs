@@ -11,9 +11,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+
 using MediAssist_Desktop_App.Entity;
 using MediAssist_Desktop_App.Model;
 using MediAssist_Desktop_App.Views.Admin;
+using MediAssist_Desktop_App.Views.Manager;
+using MediAssist_Desktop_App.Views.DeliveryMan;
+using MediAssist_Desktop_App.Views.Doctor;
+using MediAssist_Desktop_App.Views.Consumer;
 
 namespace MediAssist_Desktop_App
 {
@@ -65,7 +70,7 @@ namespace MediAssist_Desktop_App
                     loginErrLbl.Visibility = Visibility.Hidden;
 
                     //For Check Purpose
-                    MessageBox.Show("User: " + user.Username+"\nAccess: "+user.Access_obj.Approval+"\nRole: "+user.Role_obj.Designation+"\nEmail: "+user.Email_obj.Mail+"\nRegistration: "+user.Reg_Status_obj.Status);
+                    ////MessageBox.Show("User: " + user.Username+"\nAccess: "+user.Access_obj.Approval+"\nRole: "+user.Role_obj.Designation+"\nEmail: "+user.Email_obj.Mail+"\nRegistration: "+user.Reg_Status_obj.Status);
                     //
 
                     if(user.Access == 1 && user.Reg_status == 2)
@@ -84,8 +89,9 @@ namespace MediAssist_Desktop_App
                         {
                             session = user;
                             //Open Manager Dash
+                            ManagerDash md = new ManagerDash(session);
+                            md.Show();
                            
-
                             this.Close();
                         }
 
@@ -93,6 +99,8 @@ namespace MediAssist_Desktop_App
                         {
                             session = user;
                             //Open Doctor Dash
+                            DoctorDash dd = new DoctorDash(session);
+                            dd.Show();
 
                             this.Close();
                         }
@@ -101,6 +109,8 @@ namespace MediAssist_Desktop_App
                         {
                             session = user;
                             //Open Delivery Man Dash
+                            DeliveryManDash dmd = new DeliveryManDash(session);
+                            dmd.Show();
 
                             this.Close();
                         }
@@ -109,6 +119,8 @@ namespace MediAssist_Desktop_App
                         {
                             session = user;
                             //Open Consumer Dash
+                            ConsumerDash cd = new ConsumerDash(session);
+                            cd.Show();
 
                             this.Close();
                         }
@@ -136,6 +148,8 @@ namespace MediAssist_Desktop_App
                     loginErrLbl.Visibility = Visibility.Visible;
                 }
             }
+
+            user = null;
         }
 
         private void registerBTN_Click(object sender, RoutedEventArgs e)

@@ -1,11 +1,11 @@
-﻿<Window x:Class="MediAssist_Desktop_App.Views.Admin.AdminDash"
+﻿<Window x:Class="MediAssist_Desktop_App.Views.DeliveryMan.DeliveryManDash"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MediAssist_Desktop_App.Views.Admin"
+        xmlns:local="clr-namespace:MediAssist_Desktop_App.Views.DeliveryMan"
         mc:Ignorable="d"
-        Title="MediAssist/Admin/Dashboard" Height="750" Width="1200"
+        Title="MediAssist/DeliveryMan/Dashboard" Height="750" Width="1200"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize">
     <Grid>
