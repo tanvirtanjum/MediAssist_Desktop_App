@@ -1,0 +1,17 @@
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\bin\Debug\MediAssist_Desktop_App.exe.config
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\bin\Debug\MediAssist_Desktop_App.exe
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\bin\Debug\MediAssist_Desktop_App.pdb
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\MediAssist_Desktop_App.csprojAssemblyReference.cache
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\App.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\MediAssist_Desktop_App_MarkupCompile.cache
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\MediAssist_Desktop_App_MarkupCompile.lref
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\MediAssist_Desktop_App.g.resources
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\MediAssist_Desktop_App.Properties.Resources.resources
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\MediAssist_Desktop_App.csproj.GenerateResource.cache
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\MediAssist_Desktop_App.csproj.CoreCompileInputs.cache
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\MediAssist_Desktop_App.exe
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\MediAssist_Desktop_App.pdb
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\LoginView.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\LoginView.baml
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\AdminDash.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\AdminDash.baml
