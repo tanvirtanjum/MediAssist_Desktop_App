@@ -49,6 +49,51 @@ namespace MediAssist_Desktop_App.Model
 			return user;
 		}
 
+		public bool updateProfile(Employee employee, string priv)
+		{
+			string query = "UPDATE employees SET name = '" + employee.Name + "', phone = '"+employee.Phone+ "', blood_group = '" + employee.Blood_group + "' WHERE id='" + employee.Login_obj.Email_obj.ID + "';";
+
+			try
+			{
+				if(employee.Login_obj.Email_obj.Mail != priv)
+                {
+					EmailsModel em = new EmailsModel();
+
+					bool mail = em.updateEmail(employee);
+
+					if (mail)
+					{
+						db.openConnection();
+						db.executeQuery(query);
+						db.closeConnection();
+
+						return true;
+					}
+
+					else
+					{
+						return false;
+					}
+				}
+
+				else
+                {
+					db.openConnection();
+					db.executeQuery(query);
+					db.closeConnection();
+
+					return true;
+				}
+							
+			}
+
+			catch (Exception ex)
+			{
+				return false;
+			}
+
+		}
+
 
 	}
 }

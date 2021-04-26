@@ -51,7 +51,6 @@
         <Label Content="Salary" HorizontalAlignment="Left" Margin="245,302,0,0" VerticalAlignment="Top" Width="127" Height="40" FontFamily="MV Boli" FontSize="18"/>
         <TextBox x:Name="salaryTB" HorizontalAlignment="Left" Height="40" Margin="377,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="377" FontSize="18" FontFamily="MV Boli" IsReadOnly="True"/>
         <Label Content="Blood Group" HorizontalAlignment="Left" Margin="245,360,0,0" VerticalAlignment="Top" Width="127" Height="40" FontFamily="MV Boli" FontSize="18"/>
-        <TextBox x:Name="bgTB" HorizontalAlignment="Left" Height="40" Margin="377,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="377" FontSize="18" FontFamily="MV Boli" IsReadOnly="True"/>
         <Label Content="Phone" HorizontalAlignment="Left" Margin="245,422,0,0" VerticalAlignment="Top" Width="127" Height="40" FontFamily="MV Boli" FontSize="18"/>
         <TextBox x:Name="phoneTB" HorizontalAlignment="Left" Height="40" Margin="377,422,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="377" FontSize="18" FontFamily="MV Boli" IsReadOnly="True"/>
         <Label Content="Email" HorizontalAlignment="Left" Margin="245,486,0,0" VerticalAlignment="Top" Width="127" Height="40" FontFamily="MV Boli" FontSize="18"/>
@@ -68,7 +67,7 @@
         <Label Content="Confirm Password" HorizontalAlignment="Left" Margin="820,484,0,0" VerticalAlignment="Top" Width="175" Height="40" FontFamily="MV Boli" FontSize="18"/>
         <PasswordBox x:Name="conpassTb" HorizontalAlignment="Left" Margin="1000,484,0,0" VerticalAlignment="Top" Width="377" Height="40" FontFamily="MV Boli" FontSize="24"/>
         <Button x:Name="confirmBtn" Content="Confirm" HorizontalAlignment="Left" Margin="1054,566,0,0" VerticalAlignment="Top" Width="91" Height="50" BorderBrush="{x:Null}" FontFamily="MV Boli" FontSize="18" Background="#FF358B14" Foreground="White" Click="confirmBtn_Click"/>
-
+        <ComboBox x:Name="bgCB" HorizontalAlignment="Left" Margin="377,364,0,0" VerticalAlignment="Top" Width="377" Height="40" FontFamily="MV Boli" FontSize="18" IsEnabled="False"/>
     </Grid>
 </Window>
 

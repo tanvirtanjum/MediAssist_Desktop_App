@@ -65,8 +65,17 @@ namespace MediAssist_Desktop_App
 
         public void executeQuery(string query)
         {
-            cmd = new SqlCommand(query, con);
-            _ = cmd.ExecuteNonQuery();
+            try
+            {
+                cmd = new SqlCommand(query, con);
+                _ = cmd.ExecuteNonQuery();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong.");
+            }
+
         }
     }
 }

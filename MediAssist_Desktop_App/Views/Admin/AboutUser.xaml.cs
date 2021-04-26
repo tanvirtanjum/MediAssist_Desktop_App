@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MediAssist_Desktop_App.Entity;
 using MediAssist_Desktop_App.Model;
+using MediAssist_Desktop_App.Sealed_Class;
 
 namespace MediAssist_Desktop_App.Views.Admin
 {
@@ -28,24 +29,35 @@ namespace MediAssist_Desktop_App.Views.Admin
 
             InitializeComponent();
 
+            bgCB.Items.Add("A+");
+            bgCB.Items.Add("A-");
+            bgCB.Items.Add("AB+");
+            bgCB.Items.Add("AB-");
+            bgCB.Items.Add("B+");
+            bgCB.Items.Add("B-");
+            bgCB.Items.Add("O+");
+            bgCB.Items.Add("O-");
+
             session = user; 
 
             conditionLbl.Content = "Conditions: "+ "\n1. Empty spaces will be ignored/trimmed."+ "\n2. New password length must be greater than 3."+ "\n3. New password & Confirm Password must be matched."+ "\n4. Old password should be correct.";
 
-            EmployeesModel em = new EmployeesModel();
-            employee = em.getEmployee(session.ID);
+            
 
-            fillup(employee);
+            fillup(session);
 
         }
 
-        public void fillup(Employee employee)
+        public void fillup(Login session)
         {
+            EmployeesModel em = new EmployeesModel();
+            employee = em.getEmployee(session.ID);
+
             nameTB.Text = employee.Name;
             usernameTB.Text = employee.Login_obj.Username;
             designationTB.Text = employee.Login_obj.Role_obj.Designation;
             salaryTB.Text = employee.Salary.ToString();
-            bgTB.Text = employee.Blood_group;
+            bgCB.SelectedItem = employee.Blood_group;
             phoneTB.Text = employee.Phone;
             emailTB.Text = employee.Login_obj.Email_obj.Mail;
         }
@@ -57,6 +69,7 @@ namespace MediAssist_Desktop_App.Views.Admin
                 nameTB.IsReadOnly = false;
                 phoneTB.IsReadOnly = false;
                 emailTB.IsReadOnly = false;
+                bgCB.IsEnabled = true;
             }
 
             else
@@ -64,6 +77,7 @@ namespace MediAssist_Desktop_App.Views.Admin
                 nameTB.IsReadOnly = true;
                 phoneTB.IsReadOnly = true;
                 emailTB.IsReadOnly = true;
+                bgCB.IsEnabled = false;
             }
         }
 
@@ -77,7 +91,85 @@ namespace MediAssist_Desktop_App.Views.Admin
 
         private void proceedBtn_Click(object sender, RoutedEventArgs e)
         {
+            string name = nameTB.Text;
+            string phone = phoneTB.Text;
+            string mail = emailTB.Text;
 
+            bool validate = true;
+            string msg = "Message: ";
+
+            if(name.Trim().Length < 1)
+            {
+                validate = false;
+                msg += "\nName Required.";
+            }
+
+            if (phone.Trim().Length < 1)
+            {
+                validate = false;
+                msg += "\nPhone Number Required.";
+            }
+
+            if (phone.Trim().Length < 11)
+            {
+                validate = false;
+                msg += "\nInvalid Phone Number.";
+            }
+
+            if (mail.Trim().Length < 1)
+            {
+                validate = false;
+                msg += "\nEmail Required.";
+            }
+            else
+            {
+                EmailValidator ev = new EmailValidator();
+
+                if (!ev.ValidateEmail(mail))
+                {
+                    validate = false;
+                    msg += "\nInvalid Email.";
+                }
+            }
+
+            if(!validate)
+            {
+                MessageBox.Show(msg);
+            }
+            else
+            {
+                string priv = employee.Login_obj.Email_obj.Mail;
+
+                Employee employeeUpdate = new Employee();
+                employeeUpdate = employee;
+
+                employeeUpdate.Name = name;
+                employeeUpdate.Login_obj.Email_obj.Mail = mail;
+                employeeUpdate.Phone = phone;
+                employeeUpdate.Blood_group = bgCB.Text;
+
+                EmployeesModel em = new EmployeesModel();
+
+                bool confirm = em.updateProfile(employeeUpdate, priv);
+
+                if(confirm)
+                {
+                    proceedBtn.Visibility = Visibility.Hidden;
+                    editBtn.Visibility = Visibility.Visible;
+
+                    MessageBox.Show("Profile Updated.");
+
+                    TBLogic();
+                    fillup(session);
+                }
+
+                else
+                {
+                    MessageBox.Show("Error.\nPossible Issue:\nRequired Unique Email.");
+                }
+            }
+
+           
         }
 
         private void confirmBtn_Click(object sender, RoutedEventArgs e)
