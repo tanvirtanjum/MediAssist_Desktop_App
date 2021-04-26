@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\App.xaml
-6-1107569356
+71422924300
 
-22-1177344331
+25379295713
 14-788570704
-LoginView.xaml;Views\Admin\AdminDash.xaml;Views\Consumer\ConsumerDash.xaml;Views\DeliveryMan\DeliveryManDash.xaml;Views\Doctor\DoctorDash.xaml;Views\Manager\ManagerDash.xaml;
+LoginView.xaml;Views\Admin\AboutUser.xaml;Views\Admin\AdminDash.xaml;Views\Consumer\ConsumerDash.xaml;Views\DeliveryMan\DeliveryManDash.xaml;Views\Doctor\DoctorDash.xaml;Views\Manager\ManagerDash.xaml;
 
-False
+True
 

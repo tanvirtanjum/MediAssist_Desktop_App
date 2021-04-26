@@ -28,5 +28,13 @@ namespace MediAssist_Desktop_App.Views.Manager
 
             InitializeComponent();
         }
+
+        private void logoutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            session = null;
+            LoginView lv = new LoginView();
+            lv.Show();
+            this.Close();
+        }
     }
 }

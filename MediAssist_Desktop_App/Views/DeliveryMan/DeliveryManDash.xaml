@@ -9,30 +9,39 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize">
     <Grid>
-        <GridSplitter HorizontalAlignment="Left" Height="721" VerticalAlignment="Top" Width="240" Margin="0,0,0,-0.2" Background="#FF115889"/>
-        <Label Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="177" Width="207" RenderTransformOrigin="0.434,0.531" Margin="12,0,0,0">
+        <GridSplitter HorizontalAlignment="Left" Height="721" VerticalAlignment="Top" Width="215" Margin="0,0,0,-0.2" Background="#FF115889"/>
+        <Label Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="147" Width="175" RenderTransformOrigin="0.434,0.531" Margin="16,0,0,0">
             <Label.Background>
                 <ImageBrush ImageSource="MediAssistProjectLogo.png"/>
             </Label.Background>
         </Label>
-        <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Margin="0,182,0,0" VerticalAlignment="Top" Width="240" Height="50" BorderBrush="{x:Null}" FontSize="25" FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="White" Background="{x:Null}"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="0,182,0,0" VerticalAlignment="Top" Height="50" Width="85">
+        <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Margin="0,182,0,0" VerticalAlignment="Top" Width="215" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="0,182,0,0" VerticalAlignment="Top" Height="50" Width="67">
             <Label.Background>
                 <ImageBrush ImageSource="HomeIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
-        <Button x:Name="ProfileBtn" Content="Profile" HorizontalAlignment="Left" Margin="0,237,0,0" VerticalAlignment="Top" Width="240" Height="50" BorderBrush="{x:Null}" FontSize="25" FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="White" Background="{x:Null}"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="0,237,0,0" VerticalAlignment="Top" Height="50" Width="85">
+        <Button x:Name="ProfileBtn" Content="Profile" HorizontalAlignment="Left" Margin="0,237,0,0" VerticalAlignment="Top" Width="215" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="0,237,0,0" VerticalAlignment="Top" Height="50" Width="67">
             <Label.Background>
                 <ImageBrush ImageSource="UserProfileIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
-        <Button x:Name="NoteBtn" Content="Notes" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Width="240" Height="50" BorderBrush="{x:Null}" FontSize="25" FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="White" Background="{x:Null}"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Height="50" Width="85">
+        <Button x:Name="NoteBtn" Content="Notes" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Width="215" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Height="50" Width="67">
             <Label.Background>
                 <ImageBrush ImageSource="/MediAssist_Desktop_App;component/Views/DeliveryMan/NotesIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
+        <GridSplitter HorizontalAlignment="Left" Height="79" Margin="210,-1,-1.4,0" VerticalAlignment="Top" Width="1185" Background="#FF115889"/>
+        <Button x:Name="logoutBtn" HorizontalAlignment="Left" Margin="1307,14,0,0" VerticalAlignment="Top" Width="67" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="logoutBtn_Click" Background="{x:Null}">
+            <Label Content="" Height="45" Width="57">
+                <Label.Background>
+                    <ImageBrush ImageSource="LogoutIcon.png" Stretch="Uniform"/>
+                </Label.Background>
+            </Label>
+        </Button>
+
     </Grid>
   
 </Window>

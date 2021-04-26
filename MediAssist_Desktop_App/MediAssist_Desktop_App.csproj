@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="Entity\Access.cs" />
     <Compile Include="Entity\Email.cs" />
+    <Compile Include="Entity\Employee.cs" />
     <Compile Include="Entity\Reg_status.cs" />
     <Compile Include="Entity\Role.cs" />
     <Compile Include="LoginView.xaml.cs">
@@ -73,6 +74,10 @@
     <Compile Include="Model\AccessModel.cs" />
     <Compile Include="Model\DBC.cs" />
     <Compile Include="Entity\Login.cs" />
+    <Compile Include="Model\EmployeesModel.cs" />
+    <Compile Include="Views\Admin\AboutUser.xaml.cs">
+      <DependentUpon>AboutUser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\AdminDash.xaml.cs">
       <DependentUpon>AdminDash.xaml</DependentUpon>
     </Compile>
@@ -121,6 +126,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\AboutUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -189,9 +198,6 @@
     <Resource Include="Views\Manager\HomeIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Views\Admin\UserProfileIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Views\Consumer\UserProfileIcon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -217,6 +223,24 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\Manager\NotesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Admin\UserProfileIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Admin\LogoutIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Consumer\LogoutIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\DeliveryMan\LogoutIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Doctor\LogoutIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Manager\LogoutIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
