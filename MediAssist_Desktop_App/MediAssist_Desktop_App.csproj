@@ -88,11 +88,20 @@
     <Compile Include="Views\Consumer\ConsumerDash.xaml.cs">
       <DependentUpon>ConsumerDash.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DeliveryMan\AboutUser.xaml.cs">
+      <DependentUpon>AboutUser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DeliveryMan\DeliveryManDash.xaml.cs">
       <DependentUpon>DeliveryManDash.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Doctor\AboutUser.xaml.cs">
+      <DependentUpon>AboutUser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Doctor\DoctorDash.xaml.cs">
       <DependentUpon>DoctorDash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manager\AboutUser.xaml.cs">
+      <DependentUpon>AboutUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Manager\ManagerDash.xaml.cs">
       <DependentUpon>ManagerDash.xaml</DependentUpon>
@@ -149,13 +158,25 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\DeliveryMan\AboutUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\DeliveryMan\DeliveryManDash.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Doctor\AboutUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Doctor\DoctorDash.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Manager\AboutUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Manager\ManagerDash.xaml">
       <SubType>Designer</SubType>
