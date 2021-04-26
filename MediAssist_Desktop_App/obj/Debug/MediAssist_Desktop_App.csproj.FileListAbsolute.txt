@@ -25,3 +25,5 @@ W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Doctor
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Manager\ManagerDash.baml
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Admin\AboutUser.g.cs
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Admin\AboutUser.baml
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Admin\NotesWindow.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Admin\NotesWindow.baml

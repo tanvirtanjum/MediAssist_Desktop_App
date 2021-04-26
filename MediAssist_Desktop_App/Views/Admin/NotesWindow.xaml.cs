@@ -17,24 +17,16 @@ using MediAssist_Desktop_App.Model;
 namespace MediAssist_Desktop_App.Views.Admin
 {
     /// <summary>
-    /// Interaction logic for AdminDash.xaml
+    /// Interaction logic for NotesWindow.xaml
     /// </summary>
-    public partial class AdminDash : Window
+    public partial class NotesWindow : Window
     {
         Login session = null;
-        public AdminDash(Login user)
+        public NotesWindow(Login user)
         {
             InitializeComponent();
 
             session = user;
-        }
-
-        private void logoutBtn_Click(object sender, RoutedEventArgs e)
-        {
-            session = null;
-            LoginView lv = new LoginView();
-            lv.Show();
-            this.Close();
         }
 
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
@@ -44,10 +36,18 @@ namespace MediAssist_Desktop_App.Views.Admin
             this.Close();
         }
 
-        private void NoteBtn_Click(object sender, RoutedEventArgs e)
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
         {
-            NotesWindow nw = new NotesWindow(session);
-            nw.Show();
+            AdminDash ad = new AdminDash(session);
+            ad.Show();
+            this.Close();
+        }
+
+        private void logoutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            session = null;
+            LoginView lv = new LoginView();
+            lv.Show();
             this.Close();
         }
     }

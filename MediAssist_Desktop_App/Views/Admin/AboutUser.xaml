@@ -27,7 +27,7 @@
                 <ImageBrush ImageSource="UserProfileIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
-        <Button x:Name="NoteBtn" Content="Notes" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Width="215" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}"/>
+        <Button x:Name="NoteBtn" Content="Notes" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Width="215" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="NoteBtn_Click"/>
         <Label Content="" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Height="50" Width="67">
             <Label.Background>
                 <ImageBrush ImageSource="/MediAssist_Desktop_App;component/Views/DeliveryMan/NotesIcon.png" Stretch="Uniform"/>

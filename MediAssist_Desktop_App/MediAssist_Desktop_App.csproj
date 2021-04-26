@@ -81,6 +81,9 @@
     <Compile Include="Views\Admin\AdminDash.xaml.cs">
       <DependentUpon>AdminDash.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin\NotesWindow.xaml.cs">
+      <DependentUpon>NotesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Consumer\ConsumerDash.xaml.cs">
       <DependentUpon>ConsumerDash.xaml</DependentUpon>
     </Compile>
@@ -134,6 +137,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Admin\AdminDash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\NotesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

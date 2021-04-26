@@ -1,11 +1,11 @@
-﻿<Window x:Class="MediAssist_Desktop_App.Views.Admin.AdminDash"
+﻿<Window x:Class="MediAssist_Desktop_App.Views.Admin.NotesWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MediAssist_Desktop_App.Views.Admin"
         mc:Ignorable="d"
-        Title="MediAssist/Admin/Dashboard" Height="750" Width="1400"
+         Title="MediAssist/Admin/Notes" Height="750" Width="1400"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize">
     <Grid>
@@ -15,7 +15,7 @@
                 <ImageBrush ImageSource="MediAssistProjectLogo.png"/>
             </Label.Background>
         </Label>
-        <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Margin="0,182,0,0" VerticalAlignment="Top" Width="215" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}"/>
+        <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Margin="0,182,0,0" VerticalAlignment="Top" Width="215" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="HomeBtn_Click"/>
         <Label Content="" HorizontalAlignment="Left" Margin="0,182,0,0" VerticalAlignment="Top" Height="50" Width="67">
             <Label.Background>
                 <ImageBrush ImageSource="HomeIcon.png" Stretch="Uniform"/>
@@ -27,14 +27,14 @@
                 <ImageBrush ImageSource="UserProfileIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
-        <Button x:Name="NoteBtn" Content="Notes" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Width="215" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="NoteBtn_Click"/>
+        <Button x:Name="NoteBtn" Content="Notes" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Width="215" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}"/>
         <Label Content="" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Height="50" Width="67">
             <Label.Background>
                 <ImageBrush ImageSource="/MediAssist_Desktop_App;component/Views/DeliveryMan/NotesIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
         <GridSplitter HorizontalAlignment="Left" Height="79" Margin="210,-1,-1.4,0" VerticalAlignment="Top" Width="1185" Background="#FF115889"/>
-        <Button x:Name="logoutBtn" HorizontalAlignment="Left" Margin="1307,14,0,0" VerticalAlignment="Top" Width="67" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="logoutBtn_Click" Background="{x:Null}">
+        <Button x:Name="logoutBtn" HorizontalAlignment="Left" Margin="1307,14,0,0" VerticalAlignment="Top" Width="67" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="{x:Null}" Click="logoutBtn_Click">
             <Label Content="" Height="45" Width="57">
                 <Label.Background>
                     <ImageBrush ImageSource="LogoutIcon.png" Stretch="Uniform"/>
