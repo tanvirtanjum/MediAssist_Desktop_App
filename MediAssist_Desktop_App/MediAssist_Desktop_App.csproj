@@ -66,6 +66,7 @@
     <Compile Include="Entity\Access.cs" />
     <Compile Include="Entity\Email.cs" />
     <Compile Include="Entity\Employee.cs" />
+    <Compile Include="Entity\Note.cs" />
     <Compile Include="Entity\Reg_status.cs" />
     <Compile Include="Entity\Role.cs" />
     <Compile Include="LoginView.xaml.cs">
@@ -75,6 +76,7 @@
     <Compile Include="Model\DBC.cs" />
     <Compile Include="Entity\Login.cs" />
     <Compile Include="Model\EmployeesModel.cs" />
+    <Compile Include="Model\NotesModel.cs" />
     <Compile Include="Sealed Class\EmailValidator.cs" />
     <Compile Include="Views\Admin\AboutUser.xaml.cs">
       <DependentUpon>AboutUser.xaml</DependentUpon>

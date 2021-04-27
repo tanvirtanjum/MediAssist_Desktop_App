@@ -41,6 +41,26 @@
                 </Label.Background>
             </Label>
         </Button>
+        <GridSplitter HorizontalAlignment="Left" Height="643" Margin="215,78,0,-0.2" VerticalAlignment="Top" Width="743"/>
+        <Button x:Name="addBtn" Content="Add" HorizontalAlignment="Left" Margin="542,574,0,0" VerticalAlignment="Top" Width="120" Height="50" Background="#FF0F7ABA" BorderBrush="{x:Null}" Foreground="White" FontFamily="MV Boli" FontSize="18" Visibility="Visible" Click="addBtn_Click"/>
+        <Button x:Name="printBtn" Content="Print" HorizontalAlignment="Left" Margin="786,574,0,0" VerticalAlignment="Top" Width="120" Height="50" Background="#FF7C0FBA" BorderBrush="{x:Null}" Foreground="White" FontFamily="MV Boli" FontSize="18" Visibility="Hidden" Click="printBtn_Click"/>
+        <Button x:Name="updateBtn" Content="Update" HorizontalAlignment="Left" Margin="282,574,0,0" VerticalAlignment="Top" Width="120" Height="50" Background="#FF0FBA61" BorderBrush="{x:Null}" Foreground="White" FontFamily="MV Boli" FontSize="18" Visibility="Hidden" Click="updateBtn_Click"/>
+        <Button x:Name="deleteBtn" Content="Delete" HorizontalAlignment="Left" Margin="536,574,0,0" VerticalAlignment="Top" Width="120" Height="50" Background="#FFBA210F" BorderBrush="{x:Null}" Foreground="White" FontFamily="MV Boli" FontSize="18" Visibility="Hidden" Click="deleteBtn_Click"/>
+        <TextBox x:Name="subjectTB" HorizontalAlignment="Left" Height="58" Margin="321,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" FontFamily="MV Boli" FontSize="18"/>
+        <Label Content="Subject:" HorizontalAlignment="Left" Margin="220,101,0,0" VerticalAlignment="Top" Height="58" Width="96" FontFamily="MV Boli" FontSize="18"/>
+        <DataGrid x:Name="notesDG" IsReadOnly="True" HorizontalAlignment="Left" Height="643" Margin="958,78,-0.4,-0.2" VerticalAlignment="Top" Width="436" FontSize="14" ColumnWidth="Auto" BorderBrush="Black" Background="#FF9C9C9C" MouseDoubleClick="load_data">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF1E7C00"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Button x:Name="refreshBtn" Content="Refresh" HorizontalAlignment="Left" Margin="786,109,0,0" VerticalAlignment="Top" Width="120" Height="50" Background="#FF0F6DBA" BorderBrush="{x:Null}" Foreground="White" FontFamily="MV Boli" FontSize="18" Visibility="Hidden" Click="refreshBtn_Click"/>
+        <TextBox x:Name="textTA" HorizontalAlignment="Left" Height="361" Margin="215,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="743" FontFamily="MV Boli" FontSize="18" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled"/>
 
     </Grid>
 </Window>

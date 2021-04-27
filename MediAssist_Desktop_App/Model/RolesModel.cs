@@ -35,5 +35,30 @@ namespace MediAssist_Desktop_App.Model
 
 			return info;
 		}
+
+		public Role getInfoOnOpenConnection(int id)
+		{
+			Role info = null;
+
+			string query = "SELECT * FROM roles WHERE id = " + id + ";";
+
+			//db.openConnection();
+			db.executeQuery(query);
+
+			var dr = db.cmd.ExecuteReader();
+
+
+			if (dr.HasRows)
+			{
+				info = new Role();
+				dr.Read();
+
+				info.ID = dr.GetInt32(0);
+				info.Designation = dr.GetString(1);
+			}
+			//db.closeConnection();
+
+			return info;
+		}
 	}
 }

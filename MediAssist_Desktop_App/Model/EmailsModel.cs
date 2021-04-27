@@ -36,6 +36,31 @@ namespace MediAssist_Desktop_App.Model
 			return info;
 		}
 
+		public Email getInfoOnOpenConnection(int id)
+		{
+			Email info = null;
+
+			string query = "SELECT * FROM emails WHERE id = " + id + ";";
+
+			//db.openConnection();
+			db.executeQuery(query);
+
+			var dr = db.cmd.ExecuteReader();
+
+
+			if (dr.HasRows)
+			{
+				info = new Email();
+				dr.Read();
+
+				info.ID = dr.GetInt32(0);
+				info.Mail = dr.GetString(1);
+			}
+			//db.closeConnection();
+
+			return info;
+		}
+
 		public Email checkEmail(string email)
 		{
 			Email info = null;

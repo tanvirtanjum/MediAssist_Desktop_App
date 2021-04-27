@@ -35,5 +35,30 @@ namespace MediAssist_Desktop_App.Model
 
 			return info;
 		}
+
+		public Access getInfoOnOpenConnection(int id)
+		{
+			Access info = null;
+
+			string query = "SELECT * FROM access WHERE id = " + id + ";";
+
+			//db.openConnection();
+			db.executeQuery(query);
+
+			var dr = db.cmd.ExecuteReader();
+
+
+			if (dr.HasRows)
+			{
+				info = new Access();
+				dr.Read();
+
+				info.ID = dr.GetInt32(0);
+				info.Approval = dr.GetString(1);
+			}
+			//db.closeConnection();
+
+			return info;
+		}
 	}
 }
