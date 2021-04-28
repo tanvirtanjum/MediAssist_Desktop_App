@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +28,8 @@ namespace MediAssist_Desktop_App.Views.Admin
         List<Employee> table = null;
 
         Employee loaded_employee = null;
+
+        bool sort = false;
         public EmployeeManagement(Login user)
         {
             InitializeComponent();
@@ -134,16 +138,19 @@ namespace MediAssist_Desktop_App.Views.Admin
                 if(sortCB.SelectedIndex == 0)
                 {
                     employeesDG.ItemsSource = table.Select(i => new { Sl = table.IndexOf(i) + 1, i.Login_obj.Username, i.Name, i.Login_obj.Role_obj.Designation, i.Login_obj.Access_obj.Approval });
+                    sort = false;
                 }
 
                 if (sortCB.SelectedIndex == 1)
                 {
                     employeesDG.ItemsSource = table.Where(j => j.Login_obj.Access == 1).Select(i => new { Sl = table.IndexOf(i) + 1, i.Login_obj.Username, i.Name, i.Login_obj.Role_obj.Designation, i.Login_obj.Access_obj.Approval });
+                    sort = true;
                 }
 
                 if (sortCB.SelectedIndex == 2)
                 {
                     employeesDG.ItemsSource = table.Where(j => j.Login_obj.Access == 2).Select(i => new { Sl = table.IndexOf(i) + 1, i.Login_obj.Username, i.Name, i.Login_obj.Role_obj.Designation, i.Login_obj.Access_obj.Approval });
+                    sort = true;
                 }
 
             }
@@ -151,49 +158,65 @@ namespace MediAssist_Desktop_App.Views.Admin
 
         private void load_data(object sender, MouseButtonEventArgs e)
         {
-            try
+            if(sort)
             {
-                var currentRowIndex = employeesDG.Items.IndexOf(employeesDG.CurrentItem);
+                loaded_employee = null;
 
-                loaded_employee = table[currentRowIndex];
-
-                if (loaded_employee != null)
+                nameTB.Text = "";
+                usernameTB.Text = "";
+                usernameTB.IsReadOnly = true;
+                designCB.SelectedIndex = 0;
+                salaryTB.Text = "";
+                bgCB.SelectedItem = "A+";
+                phoneTB.Text = "";
+                emailTB.Text = "";
+                MessageBox.Show("Sorted Data can't be loaded.\nSelect 'ALL EMPLOYEES' for load individual.");
+            }
+            else
+            {
+                try
                 {
-                    nameTB.Text = loaded_employee.Name;
-                    usernameTB.Text = loaded_employee.Login_obj.Username;
-                    usernameTB.IsReadOnly = true;
-                    designCB.SelectedIndex = loaded_employee.Login_obj.Role;
-                    salaryTB.Text = loaded_employee.Salary.ToString();
-                    bgCB.SelectedItem = loaded_employee.Blood_group;
-                    phoneTB.Text = loaded_employee.Phone;
-                    emailTB.Text = loaded_employee.Login_obj.Email_obj.Mail;
-                    
-                    addBtn.Visibility = Visibility.Hidden;
+                    var currentRowIndex = employeesDG.Items.IndexOf(employeesDG.SelectedItem);
 
-                    updateBtn.Visibility = Visibility.Visible;
+                    loaded_employee = table[currentRowIndex];
 
-                    if (loaded_employee.Login_obj.Access == 1)
+                    if (loaded_employee != null)
                     {
-                        activateBtn.Visibility = Visibility.Hidden;
-                        deactiveBtn.Visibility = Visibility.Visible;
-                    }
+                        nameTB.Text = loaded_employee.Name;
+                        usernameTB.Text = loaded_employee.Login_obj.Username;
+                        usernameTB.IsReadOnly = true;
+                        designCB.SelectedIndex = loaded_employee.Login_obj.Role;
+                        salaryTB.Text = loaded_employee.Salary.ToString();
+                        bgCB.SelectedItem = loaded_employee.Blood_group;
+                        phoneTB.Text = loaded_employee.Phone;
+                        emailTB.Text = loaded_employee.Login_obj.Email_obj.Mail;
 
-                    if (loaded_employee.Login_obj.Access == 2)
-                    {
-                        activateBtn.Visibility = Visibility.Visible;
-                        deactiveBtn.Visibility = Visibility.Hidden;
-                    }
+                        addBtn.Visibility = Visibility.Hidden;
 
-                    refreshBtn.Visibility = Visibility.Visible;
+                        updateBtn.Visibility = Visibility.Visible;
+
+                        if (loaded_employee.Login_obj.Access == 1)
+                        {
+                            activateBtn.Visibility = Visibility.Hidden;
+                            deactiveBtn.Visibility = Visibility.Visible;
+                        }
+
+                        if (loaded_employee.Login_obj.Access == 2)
+                        {
+                            activateBtn.Visibility = Visibility.Visible;
+                            deactiveBtn.Visibility = Visibility.Hidden;
+                        }
+
+                        refreshBtn.Visibility = Visibility.Visible;
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("NO DATA.");
+                    refreshBtn_Click(sender, e);
                 }
             }
-
-            catch(Exception ex)
-            {
-                MessageBox.Show("NO DATA.");
-                refreshBtn_Click(sender, e);
-            }
-            
         }
 
         private void sortCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -203,7 +226,7 @@ namespace MediAssist_Desktop_App.Views.Admin
 
         private void addBtn_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void refreshBtn_Click(object sender, RoutedEventArgs e)
@@ -223,16 +246,36 @@ namespace MediAssist_Desktop_App.Views.Admin
             activateBtn.Visibility = Visibility.Hidden;
             deactiveBtn.Visibility = Visibility.Hidden;
             refreshBtn.Visibility = Visibility.Hidden;
+
+            LoadTable();
         }
 
         private void activateBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            LoginsModel lm = new LoginsModel();
+            bool active = lm.activateUser(loaded_employee.Login_id);
+            if (active)
+            {
+                refreshBtn_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Something Went Wrong.");
+            }
         }
 
         private void deactiveBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            LoginsModel lm = new LoginsModel();
+            bool active = lm.deactivateUser(loaded_employee.Login_id);
+            if (active)
+            {
+                refreshBtn_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Something Went Wrong.");
+            }
         }
 
         private void updateBtn_Click(object sender, RoutedEventArgs e)

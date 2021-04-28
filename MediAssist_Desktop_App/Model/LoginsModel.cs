@@ -164,6 +164,46 @@ namespace MediAssist_Desktop_App.Model
 
 		}
 
+		public bool activateUser(int id)
+		{
+			string query = "UPDATE logins SET access = '1' WHERE id='" + id + "';";
+
+			try
+			{
+				db.openConnection();
+				db.executeQuery(query);
+				db.closeConnection();
+
+				return true;
+			}
+
+			catch (Exception ex)
+			{
+				return false;
+			}
+
+		}
+
+		public bool deactivateUser(int id)
+		{
+			string query = "UPDATE logins SET access = '2' WHERE id='" + id + "';";
+
+			try
+			{
+				db.openConnection();
+				db.executeQuery(query);
+				db.closeConnection();
+
+				return true;
+			}
+
+			catch (Exception ex)
+			{
+				return false;
+			}
+
+		}
+
 
 	}
 }
