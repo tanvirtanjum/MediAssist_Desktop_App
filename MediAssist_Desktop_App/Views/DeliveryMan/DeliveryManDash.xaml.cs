@@ -37,6 +37,13 @@ namespace MediAssist_Desktop_App.Views.DeliveryMan
             this.Close();
         }
 
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DeliveryManDash dmd = new DeliveryManDash(session);
+            dmd.Show();
+            this.Close();
+        }
+
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
         {
             AboutUser au = new AboutUser(session);

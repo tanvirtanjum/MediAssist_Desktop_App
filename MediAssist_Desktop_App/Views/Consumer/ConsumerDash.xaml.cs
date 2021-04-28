@@ -36,6 +36,13 @@ namespace MediAssist_Desktop_App.Views.Consumer
             this.Close();
         }
 
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+           // ConsumerDash cd = new ConsumerDash(session);
+            //cd.Show();
+            //this.Close();
+        }
+
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
         {
             AboutUser au = new AboutUser(session);

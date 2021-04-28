@@ -37,6 +37,13 @@ namespace MediAssist_Desktop_App.Views.Doctor
             this.Close();
         }
 
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //DoctorDash dd = new DoctorDash(session);
+            //dd.Show();
+            //this.Close();
+        }
+
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
         {
             AboutUser au = new AboutUser(session);

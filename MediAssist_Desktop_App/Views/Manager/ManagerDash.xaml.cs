@@ -37,6 +37,13 @@ namespace MediAssist_Desktop_App.Views.Manager
             this.Close();
         }
 
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ///ManagerDash md = new ManagerDash(session);
+            //md.Show();
+            //this.Close();
+        }
+
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
         {
             AboutUser au = new AboutUser(session);

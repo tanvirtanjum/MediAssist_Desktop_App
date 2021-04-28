@@ -54,20 +54,28 @@ namespace MediAssist_Desktop_App.Views.Consumer
 
         private void load_data(object sender, MouseButtonEventArgs e)
         {
-            var currentRowIndex = notesDG.Items.IndexOf(notesDG.CurrentItem);
+            try
+            {
+                var currentRowIndex = notesDG.Items.IndexOf(notesDG.CurrentItem);
 
-            loaded_note = table[currentRowIndex];
+                loaded_note = table[currentRowIndex];
 
-            subjectTB.Text =loaded_note.Subject;
-            textTA.Text = loaded_note.Text;
+                subjectTB.Text = loaded_note.Subject;
+                textTA.Text = loaded_note.Text;
 
 
-            addBtn.Visibility = Visibility.Hidden;
+                addBtn.Visibility = Visibility.Hidden;
 
-            updateBtn.Visibility = Visibility.Visible;
-            printBtn.Visibility = Visibility.Visible;
-            deleteBtn.Visibility = Visibility.Visible;
-            refreshBtn.Visibility = Visibility.Visible;
+                updateBtn.Visibility = Visibility.Visible;
+                printBtn.Visibility = Visibility.Visible;
+                deleteBtn.Visibility = Visibility.Visible;
+                refreshBtn.Visibility = Visibility.Visible;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("NO DATA.");
+            }
         }
 
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
