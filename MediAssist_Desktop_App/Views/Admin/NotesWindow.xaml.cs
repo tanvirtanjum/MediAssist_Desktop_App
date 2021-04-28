@@ -37,10 +37,13 @@ namespace MediAssist_Desktop_App.Views.Admin
             LoadTable();
         }
 
-        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
+        /* ROUTES -- ADMIN */
+        //Start
+        private void logoutBtn_Click(object sender, RoutedEventArgs e)
         {
-            AboutUser au = new AboutUser(session);
-            au.Show();
+            session = null;
+            LoginView lv = new LoginView();
+            lv.Show();
             this.Close();
         }
 
@@ -51,18 +54,50 @@ namespace MediAssist_Desktop_App.Views.Admin
             this.Close();
         }
 
-        private void logoutBtn_Click(object sender, RoutedEventArgs e)
+        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
         {
-            session = null;
-            LoginView lv = new LoginView();
-            lv.Show();
+            AboutUser au = new AboutUser(session);
+            au.Show();
             this.Close();
         }
 
         private void NoteBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            //NotesWindow nw = new NotesWindow(session);
+            //nw.Show();
+            //this.Close();
         }
+
+        private void EmployeesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            EmployeeManagement em = new EmployeeManagement(session);
+            em.Show();
+            this.Close();
+        }
+
+        private void CustomersBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ConsumersManagement cm = new ConsumersManagement(session);
+            cm.Show();
+            this.Close();
+        }
+
+        private void RegistrationBtn_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrationManagement rm = new RegistrationManagement(session);
+            rm.Show();
+            this.Close();
+        }
+
+        private void FeedbackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            FeedbackView fv = new FeedbackView(session);
+            fv.Show();
+            this.Close();
+        }
+
+        //End
+        /* ROUTES -- ADMIN */
 
         private void LoadTable()
         {

@@ -87,8 +87,20 @@
     <Compile Include="Views\Admin\AdminDash.xaml.cs">
       <DependentUpon>AdminDash.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin\ConsumersManagement.xaml.cs">
+      <DependentUpon>ConsumersManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\EmployeeManagement.xaml.cs">
+      <DependentUpon>EmployeeManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\FeedbackView.xaml.cs">
+      <DependentUpon>FeedbackView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\NotesWindow.xaml.cs">
       <DependentUpon>NotesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\RegistrationManagement.xaml.cs">
+      <DependentUpon>RegistrationManagement.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Consumer\AboutUser.xaml.cs">
       <DependentUpon>AboutUser.xaml</DependentUpon>
@@ -170,7 +182,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Admin\ConsumersManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\EmployeeManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\FeedbackView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Admin\NotesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\RegistrationManagement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

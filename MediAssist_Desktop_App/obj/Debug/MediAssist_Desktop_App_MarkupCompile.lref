@@ -16,4 +16,8 @@ FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Consumer\NotesW
 FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\DeliveryMan\NotesWindow.xaml;;
 FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Doctor\NotesWindow.xaml;;
 FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Manager\NotesWindow.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Admin\ConsumersManagement.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Admin\EmployeeManagement.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Admin\FeedbackView.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Admin\RegistrationManagement.xaml;;
 

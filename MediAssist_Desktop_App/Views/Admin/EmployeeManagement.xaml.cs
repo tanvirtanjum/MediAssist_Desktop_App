@@ -17,12 +17,12 @@ using MediAssist_Desktop_App.Model;
 namespace MediAssist_Desktop_App.Views.Admin
 {
     /// <summary>
-    /// Interaction logic for AdminDash.xaml
+    /// Interaction logic for EmployeeManagement.xaml
     /// </summary>
-    public partial class AdminDash : Window
+    public partial class EmployeeManagement : Window
     {
         Login session = null;
-        public AdminDash(Login user)
+        public EmployeeManagement(Login user)
         {
             InitializeComponent();
 
@@ -41,9 +41,9 @@ namespace MediAssist_Desktop_App.Views.Admin
 
         private void HomeBtn_Click(object sender, RoutedEventArgs e)
         {
-            //AdminDash ad = new AdminDash(session);
-            //ad.Show();
-            //this.Close();
+            AdminDash ad = new AdminDash(session);
+            ad.Show();
+            this.Close();
         }
 
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
@@ -62,9 +62,9 @@ namespace MediAssist_Desktop_App.Views.Admin
 
         private void EmployeesBtn_Click(object sender, RoutedEventArgs e)
         {
-            EmployeeManagement em = new EmployeeManagement(session);
-            em.Show();
-            this.Close();
+            //EmployeeManagement em = new EmployeeManagement(session);
+            //em.Show();
+            //this.Close();
         }
 
         private void CustomersBtn_Click(object sender, RoutedEventArgs e)

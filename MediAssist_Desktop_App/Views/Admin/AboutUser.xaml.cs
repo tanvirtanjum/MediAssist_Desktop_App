@@ -48,6 +48,8 @@ namespace MediAssist_Desktop_App.Views.Admin
 
         }
 
+        /* ROUTES -- ADMIN */
+        //Start
         private void logoutBtn_Click(object sender, RoutedEventArgs e)
         {
             session = null;
@@ -63,6 +65,13 @@ namespace MediAssist_Desktop_App.Views.Admin
             this.Close();
         }
 
+        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //AboutUser au = new AboutUser(session);
+            //au.Show();
+            //this.Close();
+        }
+
         private void NoteBtn_Click(object sender, RoutedEventArgs e)
         {
             NotesWindow nw = new NotesWindow(session);
@@ -70,10 +79,37 @@ namespace MediAssist_Desktop_App.Views.Admin
             this.Close();
         }
 
-        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
+        private void EmployeesBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            EmployeeManagement em = new EmployeeManagement(session);
+            em.Show();
+            this.Close();
         }
+
+        private void CustomersBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ConsumersManagement cm = new ConsumersManagement(session);
+            cm.Show();
+            this.Close();
+        }
+
+        private void RegistrationBtn_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrationManagement rm = new RegistrationManagement(session);
+            rm.Show();
+            this.Close();
+        }
+
+        private void FeedbackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            FeedbackView fv = new FeedbackView(session);
+            fv.Show();
+            this.Close();
+        }
+
+        //End
+        /* ROUTES -- ADMIN */
+
 
         public void fillup(Login session)
         {

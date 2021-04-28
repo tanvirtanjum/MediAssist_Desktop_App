@@ -15,24 +15,6 @@
                 <ImageBrush ImageSource="MediAssistProjectLogo.png"/>
             </Label.Background>
         </Label>
-        <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Margin="67,182,0,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="HomeBtn_Click"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="0,182,0,0" VerticalAlignment="Top" Height="50" Width="67">
-            <Label.Background>
-                <ImageBrush ImageSource="HomeIcon.png" Stretch="Uniform"/>
-            </Label.Background>
-        </Label>
-        <Button x:Name="ProfileBtn" Content="Profile" HorizontalAlignment="Left" Margin="67,237,0,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="ProfileBtn_Click"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="0,237,0,0" VerticalAlignment="Top" Height="50" Width="67">
-            <Label.Background>
-                <ImageBrush ImageSource="UserProfileIcon.png" Stretch="Uniform"/>
-            </Label.Background>
-        </Label>
-        <Button x:Name="NoteBtn" Content="Notes" HorizontalAlignment="Left" Margin="67,292,0,0" VerticalAlignment="Top" Width="143" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="NoteBtn_Click"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Height="50" Width="67">
-            <Label.Background>
-                <ImageBrush ImageSource="/MediAssist_Desktop_App;component/Views/DeliveryMan/NotesIcon.png" Stretch="Uniform"/>
-            </Label.Background>
-        </Label>
         <GridSplitter HorizontalAlignment="Left" Height="79" Margin="210,-1,-1.4,0" VerticalAlignment="Top" Width="1185" Background="#FF115889"/>
         <Button x:Name="logoutBtn" HorizontalAlignment="Left" Margin="1307,14,0,0" VerticalAlignment="Top" Width="67" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="logoutBtn_Click" Background="{x:Null}">
             <Label Content="" Height="45" Width="57">
@@ -68,25 +50,43 @@
         <PasswordBox x:Name="conpassTb" HorizontalAlignment="Left" Margin="1000,484,0,0" VerticalAlignment="Top" Width="377" Height="40" FontFamily="MV Boli" FontSize="24"/>
         <Button x:Name="confirmBtn" Content="Confirm" HorizontalAlignment="Left" Margin="1054,566,0,0" VerticalAlignment="Top" Width="91" Height="50" BorderBrush="{x:Null}" FontFamily="MV Boli" FontSize="18" Background="#FF358B14" Foreground="White" Click="confirmBtn_Click"/>
         <ComboBox x:Name="bgCB" HorizontalAlignment="Left" Margin="377,364,0,0" VerticalAlignment="Top" Width="377" Height="40" FontFamily="MV Boli" FontSize="18" IsEnabled="False"/>
-        <Button x:Name="EmployeesBtn" Content="Employees" HorizontalAlignment="Left" Margin="67,347,0,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}"/>
+        <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Margin="67,182,0,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="HomeBtn_Click"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="0,182,0,0" VerticalAlignment="Top" Height="50" Width="67">
+            <Label.Background>
+                <ImageBrush ImageSource="HomeIcon.png" Stretch="Uniform"/>
+            </Label.Background>
+        </Label>
+        <Button x:Name="ProfileBtn" Content="Profile" HorizontalAlignment="Left" Margin="67,237,0,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="ProfileBtn_Click"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="0,237,0,0" VerticalAlignment="Top" Height="50" Width="67">
+            <Label.Background>
+                <ImageBrush ImageSource="UserProfileIcon.png" Stretch="Uniform"/>
+            </Label.Background>
+        </Label>
+        <Button x:Name="NoteBtn" Content="Notes" HorizontalAlignment="Left" Margin="67,292,0,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="NoteBtn_Click"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Height="50" Width="67">
+            <Label.Background>
+                <ImageBrush ImageSource="/MediAssist_Desktop_App;component/Views/DeliveryMan/NotesIcon.png" Stretch="Uniform"/>
+            </Label.Background>
+        </Label>
+        <Button x:Name="EmployeesBtn" Content="Employees" HorizontalAlignment="Left" Margin="67,347,0,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="EmployeesBtn_Click"/>
         <Label Content="" HorizontalAlignment="Left" Margin="9,347,0,0" VerticalAlignment="Top" Height="50" Width="55">
             <Label.Background>
                 <ImageBrush ImageSource="EmployeesIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
-        <Button x:Name="CustomersBtn" Content="Consumers" HorizontalAlignment="Left" Margin="67,397,0,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}"/>
+        <Button x:Name="CustomersBtn" Content="Consumers" HorizontalAlignment="Left" Margin="67,397,0,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="CustomersBtn_Click"/>
         <Label Content="" HorizontalAlignment="Left" Margin="7,397,0,0" VerticalAlignment="Top" Height="50" Width="55">
             <Label.Background>
                 <ImageBrush ImageSource="CustomersIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
-        <Button x:Name="RegistrationBtn" Content="Registration" HorizontalAlignment="Left" Margin="67,452,0,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}"/>
+        <Button x:Name="RegistrationBtn" Content="Registration" HorizontalAlignment="Left" Margin="67,452,0,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="RegistrationBtn_Click"/>
         <Label Content="" HorizontalAlignment="Left" Margin="9,452,0,0" VerticalAlignment="Top" Height="50" Width="49">
             <Label.Background>
                 <ImageBrush ImageSource="RegistrationIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
-        <Button x:Name="FeedbackBtn" Content="Feedbacks" HorizontalAlignment="Left" Margin="67,507,0,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}"/>
+        <Button x:Name="FeedbackBtn" Content="Feedbacks" HorizontalAlignment="Left" Margin="67,507,0,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="FeedbackBtn_Click"/>
         <Label Content="" HorizontalAlignment="Left" Margin="0,507,0,0" VerticalAlignment="Top" Height="50" Width="67">
             <Label.Background>
                 <ImageBrush ImageSource="FeedbackIcon.png" Stretch="Uniform"/>

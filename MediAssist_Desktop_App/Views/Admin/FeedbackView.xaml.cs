@@ -17,12 +17,12 @@ using MediAssist_Desktop_App.Model;
 namespace MediAssist_Desktop_App.Views.Admin
 {
     /// <summary>
-    /// Interaction logic for AdminDash.xaml
+    /// Interaction logic for FeedbackView.xaml
     /// </summary>
-    public partial class AdminDash : Window
+    public partial class FeedbackView : Window
     {
         Login session = null;
-        public AdminDash(Login user)
+        public FeedbackView(Login user)
         {
             InitializeComponent();
 
@@ -41,9 +41,9 @@ namespace MediAssist_Desktop_App.Views.Admin
 
         private void HomeBtn_Click(object sender, RoutedEventArgs e)
         {
-            //AdminDash ad = new AdminDash(session);
-            //ad.Show();
-            //this.Close();
+            AdminDash ad = new AdminDash(session);
+            ad.Show();
+            this.Close();
         }
 
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
@@ -83,9 +83,9 @@ namespace MediAssist_Desktop_App.Views.Admin
 
         private void FeedbackBtn_Click(object sender, RoutedEventArgs e)
         {
-            FeedbackView fv = new FeedbackView(session);
-            fv.Show();
-            this.Close();
+            //FeedbackView fv = new FeedbackView(session);
+            //fv.Show();
+            //this.Close();
         }
 
         //End
