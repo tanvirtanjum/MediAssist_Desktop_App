@@ -33,3 +33,13 @@ W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Doctor
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Manager\AboutUser.g.cs
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Doctor\AboutUser.baml
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Manager\AboutUser.baml
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Consumer\AboutUser.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Consumer\NotesWindow.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Consumer\AboutUser.baml
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Consumer\NotesWindow.baml
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\DeliveryMan\NotesWindow.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Doctor\NotesWindow.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Manager\NotesWindow.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\DeliveryMan\NotesWindow.baml
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Doctor\NotesWindow.baml
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Manager\NotesWindow.baml

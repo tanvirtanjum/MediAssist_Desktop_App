@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MediAssist_Desktop_App.Entity;
 using MediAssist_Desktop_App.Model;
+using MediAssist_Desktop_App.Sealed_Class;
+
 
 namespace MediAssist_Desktop_App.Views.Admin
 {
@@ -185,7 +187,8 @@ namespace MediAssist_Desktop_App.Views.Admin
 
         private void printBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            SaveToTxt s2t = new SaveToTxt();
+            s2t.SaveNote(loaded_note);
         }
 
         private void addBtn_Click(object sender, RoutedEventArgs e)

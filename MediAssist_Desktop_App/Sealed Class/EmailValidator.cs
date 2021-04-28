@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MediAssist_Desktop_App.Sealed_Class
 {
-    public class EmailValidator
+    public sealed class EmailValidator
     {
         public EmailValidator() { }
         public bool ValidateEmail(string mail)

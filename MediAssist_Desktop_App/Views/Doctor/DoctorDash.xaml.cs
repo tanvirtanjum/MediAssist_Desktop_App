@@ -46,9 +46,9 @@ namespace MediAssist_Desktop_App.Views.Doctor
 
         private void NoteBtn_Click(object sender, RoutedEventArgs e)
         {
-            //NotesWindow nw = new NotesWindow(session);
-            //nw.Show();
-            //this.Close();
+            NotesWindow nw = new NotesWindow(session);
+            nw.Show();
+            this.Close();
         }
     }
 }

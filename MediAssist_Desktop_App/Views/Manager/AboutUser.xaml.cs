@@ -240,9 +240,9 @@ namespace MediAssist_Desktop_App.Views.Manager
 
         private void NoteBtn_Click(object sender, RoutedEventArgs e)
         {
-            //NotesWindow nw = new NotesWindow(session);
-            //nw.Show();
-            //this.Close();
+            NotesWindow nw = new NotesWindow(session);
+            nw.Show();
+            this.Close();
         }
     }
 }

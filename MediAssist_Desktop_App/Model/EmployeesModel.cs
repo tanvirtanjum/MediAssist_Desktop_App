@@ -38,7 +38,7 @@ namespace MediAssist_Desktop_App.Model
 
 				LoginsModel lm = new LoginsModel();
 
-				user.Login_obj = lm.getInfo(Convert.ToInt32(user.ID));
+				user.Login_obj = lm.getInfo(Convert.ToInt32(user.Login_id));
 				
 			}
 			else
@@ -51,7 +51,7 @@ namespace MediAssist_Desktop_App.Model
 
 		public bool updateProfile(Employee employee, string priv)
 		{
-			string query = "UPDATE employees SET name = '" + employee.Name + "', phone = '"+employee.Phone+ "', blood_group = '" + employee.Blood_group + "' WHERE id = '" + employee.Login_obj.Email_obj.ID + "';";
+			string query = "UPDATE employees SET name = '" + employee.Name + "', phone = '"+employee.Phone+ "', blood_group = '" + employee.Blood_group + "' WHERE id = '" + employee.ID + "';";
 
 			try
 			{

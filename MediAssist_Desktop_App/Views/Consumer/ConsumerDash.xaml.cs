@@ -35,5 +35,19 @@ namespace MediAssist_Desktop_App.Views.Consumer
             lv.Show();
             this.Close();
         }
+
+        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AboutUser au = new AboutUser(session);
+            au.Show();
+            this.Close();
+        }
+
+        private void NoteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NotesWindow nw = new NotesWindow(session);
+            nw.Show();
+            this.Close();
+        }
     }
 }

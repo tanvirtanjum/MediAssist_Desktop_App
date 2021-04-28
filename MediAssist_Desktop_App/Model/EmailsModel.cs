@@ -115,8 +115,36 @@ namespace MediAssist_Desktop_App.Model
 			{
 				return false;
 			}
+		}
+
+		public bool updateEmailConsumer(Consumers consumer)
+		{
+			Email has = this.checkEmail(consumer.Login_obj.Email_obj.Mail.ToString());
 
 
+			string query = "UPDATE emails SET mail = '" + consumer.Login_obj.Email_obj.Mail.ToString() + "' WHERE id='" + consumer.Login_obj.Email_obj.ID + "';";
+
+			if (has == null)
+			{
+				try
+				{
+					db.openConnection();
+					db.executeQuery(query);
+					db.closeConnection();
+
+					return true;
+				}
+
+				catch (Exception ex)
+				{
+					return false;
+				}
+			}
+
+			else
+			{
+				return false;
+			}
 		}
 	}
 }

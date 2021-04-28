@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Entity\Access.cs" />
+    <Compile Include="Entity\Consumers.cs" />
     <Compile Include="Entity\Email.cs" />
     <Compile Include="Entity\Employee.cs" />
     <Compile Include="Entity\Note.cs" />
@@ -73,11 +74,13 @@
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\AccessModel.cs" />
+    <Compile Include="Model\ConsumersModel.cs" />
     <Compile Include="Model\DBC.cs" />
     <Compile Include="Entity\Login.cs" />
     <Compile Include="Model\EmployeesModel.cs" />
     <Compile Include="Model\NotesModel.cs" />
     <Compile Include="Sealed Class\EmailValidator.cs" />
+    <Compile Include="Sealed Class\SaveToTxt.cs" />
     <Compile Include="Views\Admin\AboutUser.xaml.cs">
       <DependentUpon>AboutUser.xaml</DependentUpon>
     </Compile>
@@ -87,8 +90,14 @@
     <Compile Include="Views\Admin\NotesWindow.xaml.cs">
       <DependentUpon>NotesWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Consumer\AboutUser.xaml.cs">
+      <DependentUpon>AboutUser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Consumer\ConsumerDash.xaml.cs">
       <DependentUpon>ConsumerDash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Consumer\NotesWindow.xaml.cs">
+      <DependentUpon>NotesWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DeliveryMan\AboutUser.xaml.cs">
       <DependentUpon>AboutUser.xaml</DependentUpon>
@@ -96,17 +105,26 @@
     <Compile Include="Views\DeliveryMan\DeliveryManDash.xaml.cs">
       <DependentUpon>DeliveryManDash.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DeliveryMan\NotesWindow.xaml.cs">
+      <DependentUpon>NotesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Doctor\AboutUser.xaml.cs">
       <DependentUpon>AboutUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Doctor\DoctorDash.xaml.cs">
       <DependentUpon>DoctorDash.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Doctor\NotesWindow.xaml.cs">
+      <DependentUpon>NotesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Manager\AboutUser.xaml.cs">
       <DependentUpon>AboutUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Manager\ManagerDash.xaml.cs">
       <DependentUpon>ManagerDash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manager\NotesWindow.xaml.cs">
+      <DependentUpon>NotesWindow.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -156,9 +174,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Consumer\AboutUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Consumer\ConsumerDash.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Consumer\NotesWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\DeliveryMan\AboutUser.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -168,6 +194,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\DeliveryMan\NotesWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Doctor\AboutUser.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -176,6 +206,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Doctor\NotesWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Manager\AboutUser.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -183,6 +217,10 @@
     <Page Include="Views\Manager\ManagerDash.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Manager\NotesWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
