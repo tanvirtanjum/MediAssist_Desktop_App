@@ -29,12 +29,19 @@ namespace MediAssist_Desktop_App.Views.Admin
             session = user;
         }
 
+        /* ROUTES -- ADMIN */
+        //Start
         private void logoutBtn_Click(object sender, RoutedEventArgs e)
         {
             session = null;
             LoginView lv = new LoginView();
             lv.Show();
             this.Close();
+        }
+
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
@@ -50,5 +57,28 @@ namespace MediAssist_Desktop_App.Views.Admin
             nw.Show();
             this.Close();
         }
+
+        private void EmployeesBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CustomersBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RegistrationBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FeedbackBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        //End
+        /* ROUTES -- ADMIN */
     }
 }

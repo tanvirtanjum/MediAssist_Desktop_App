@@ -310,5 +310,17 @@
   <ItemGroup>
     <Resource Include="Views\Manager\LogoutIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Admin\EmployeesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Admin\CustomersIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Admin\RegistrationIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Admin\FeedbackIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

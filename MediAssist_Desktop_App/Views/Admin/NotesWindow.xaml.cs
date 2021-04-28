@@ -37,6 +37,33 @@ namespace MediAssist_Desktop_App.Views.Admin
             LoadTable();
         }
 
+        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AboutUser au = new AboutUser(session);
+            au.Show();
+            this.Close();
+        }
+
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AdminDash ad = new AdminDash(session);
+            ad.Show();
+            this.Close();
+        }
+
+        private void logoutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            session = null;
+            LoginView lv = new LoginView();
+            lv.Show();
+            this.Close();
+        }
+
+        private void NoteBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void LoadTable()
         {
             NotesModel nm = new NotesModel();
@@ -68,28 +95,6 @@ namespace MediAssist_Desktop_App.Views.Admin
             printBtn.Visibility = Visibility.Visible;
             deleteBtn.Visibility = Visibility.Visible;
             refreshBtn.Visibility = Visibility.Visible;
-        }
-
-        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
-        {
-            AboutUser au = new AboutUser(session);
-            au.Show();
-            this.Close();
-        }
-
-        private void HomeBtn_Click(object sender, RoutedEventArgs e)
-        {
-            AdminDash ad = new AdminDash(session);
-            ad.Show();
-            this.Close();
-        }
-
-        private void logoutBtn_Click(object sender, RoutedEventArgs e)
-        {
-            session = null;
-            LoginView lv = new LoginView();
-            lv.Show();
-            this.Close();
         }
 
         private void refreshBtn_Click(object sender, RoutedEventArgs e)

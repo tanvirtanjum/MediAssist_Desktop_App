@@ -48,6 +48,33 @@ namespace MediAssist_Desktop_App.Views.Admin
 
         }
 
+        private void logoutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            session = null;
+            LoginView lv = new LoginView();
+            lv.Show();
+            this.Close();
+        }
+
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AdminDash ad = new AdminDash(session);
+            ad.Show();
+            this.Close();
+        }
+
+        private void NoteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NotesWindow nw = new NotesWindow(session);
+            nw.Show();
+            this.Close();
+        }
+
+        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         public void fillup(Login session)
         {
             EmployeesModel em = new EmployeesModel();
@@ -221,28 +248,6 @@ namespace MediAssist_Desktop_App.Views.Admin
                 }
             }
 
-        }
-
-        private void logoutBtn_Click(object sender, RoutedEventArgs e)
-        {
-            session = null;
-            LoginView lv = new LoginView();
-            lv.Show();
-            this.Close();
-        }
-
-        private void HomeBtn_Click(object sender, RoutedEventArgs e)
-        {
-            AdminDash ad = new AdminDash(session);
-            ad.Show();
-            this.Close();
-        }
-
-        private void NoteBtn_Click(object sender, RoutedEventArgs e)
-        {
-            NotesWindow nw = new NotesWindow(session);
-            nw.Show();
-            this.Close();
         }
     }
 }
