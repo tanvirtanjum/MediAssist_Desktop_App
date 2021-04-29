@@ -21,6 +21,8 @@ namespace MediAssist_Desktop_App.Entity
         Reg_status reg_Status_obj;
         Email email_obj;
 
+        Consumers consumers_obj;
+
         public Login() { }
 
         public int ID
@@ -88,5 +90,12 @@ namespace MediAssist_Desktop_App.Entity
             get { return email_obj; }
             set { email_obj = value; }
         }
+
+        public Consumers Consumers_obj
+        {
+            get { return consumers_obj; }
+            set { consumers_obj = value; }
+        }
+
     }
 }

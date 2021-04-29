@@ -121,7 +121,7 @@ namespace MediAssist_Desktop_App.Views.Admin
 
             table = cm.getTable();
 
-            if (table == null) { }
+            if (table == null) { MessageBox.Show("....!"); }
 
             else
             {

@@ -179,5 +179,25 @@ namespace MediAssist_Desktop_App.Model
 				return id;
 			}
 		}
+
+		public bool rejectMail(int id)
+		{
+			string query = "DELETE FROM emails WHERE id = '" + id + "';";
+
+			try
+			{
+				db.openConnection();
+				db.executeQuery(query);
+				db.closeConnection();
+
+				return true;
+			}
+
+			catch (Exception ex)
+			{
+				return false;
+			}
+
+		}
 	}
 }

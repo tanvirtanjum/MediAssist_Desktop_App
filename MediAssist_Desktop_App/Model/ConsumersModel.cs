@@ -49,6 +49,42 @@ namespace MediAssist_Desktop_App.Model
 			return user;
 		}
 
+		public Consumers getConsumerOnOpenConnection(int login_id)
+		{
+			Consumers user = null;
+
+			string query = "SELECT * FROM consumers WHERE login_id = '" + login_id + "';";
+
+			db.executeQuery(query);
+
+			var dr = db.cmd.ExecuteReader();
+
+
+			if (dr.HasRows)
+			{
+				user = new Consumers();
+				dr.Read();
+
+				user.ID = dr.GetInt32(0);
+				user.Name = dr.GetString(1);
+				user.Occupation = dr.GetString(2);
+				user.Blood_group = dr.GetString(3);
+				user.Phone = dr.GetString(4);
+				user.Login_id = dr.GetInt32(5);
+
+				LoginsModel lm = new LoginsModel();
+
+				user.Login_obj = lm.getInfoOnOpenConnection(Convert.ToInt32(user.Login_id));
+
+			}
+			else
+			{
+				db.closeConnection();
+			}
+
+			return user;
+		}
+
 		public bool updateProfile(Consumers consumer, string priv)
 		{
 			string query = "UPDATE consumers SET name = '" + consumer.Name + "', phone = '" + consumer.Phone + "', blood_group = '" + consumer.Blood_group + "' WHERE id = '" + consumer.ID + "';";
@@ -134,6 +170,26 @@ namespace MediAssist_Desktop_App.Model
 			db.closeConnection();
 
 			return table;
+		}
+
+		public bool rejectConsumer(int id)
+		{
+			string query = "DELETE FROM consumers WHERE login_id = '" + id + "';";
+
+			try
+			{
+				db.openConnection();
+				db.executeQuery(query);
+				db.closeConnection();
+
+				return true;
+			}
+
+			catch (Exception ex)
+			{
+				return false;
+			}
+
 		}
 	}
 }

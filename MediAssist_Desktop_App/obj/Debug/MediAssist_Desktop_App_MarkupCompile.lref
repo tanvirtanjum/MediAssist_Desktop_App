@@ -1,23 +1,23 @@
 ﻿
 
 FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\LoginView.xaml;;
-FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Admin\AdminDash.xaml;;
-FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Consumer\ConsumerDash.xaml;;
-FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\DeliveryMan\DeliveryManDash.xaml;;
-FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Doctor\DoctorDash.xaml;;
-FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Manager\ManagerDash.xaml;;
 FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Admin\AboutUser.xaml;;
-FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Admin\NotesWindow.xaml;;
-FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\DeliveryMan\AboutUser.xaml;;
-FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Doctor\AboutUser.xaml;;
-FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Manager\AboutUser.xaml;;
-FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Consumer\AboutUser.xaml;;
-FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Consumer\NotesWindow.xaml;;
-FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\DeliveryMan\NotesWindow.xaml;;
-FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Doctor\NotesWindow.xaml;;
-FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Manager\NotesWindow.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Admin\AdminDash.xaml;;
 FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Admin\ConsumersManagement.xaml;;
 FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Admin\EmployeeManagement.xaml;;
 FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Admin\FeedbackView.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Admin\NotesWindow.xaml;;
 FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Admin\RegistrationManagement.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Consumer\AboutUser.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Consumer\ConsumerDash.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Consumer\NotesWindow.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\DeliveryMan\AboutUser.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\DeliveryMan\DeliveryManDash.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\DeliveryMan\NotesWindow.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Doctor\AboutUser.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Doctor\DoctorDash.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Doctor\NotesWindow.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Manager\AboutUser.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Manager\ManagerDash.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Manager\NotesWindow.xaml;;
 

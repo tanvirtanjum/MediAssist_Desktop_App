@@ -259,5 +259,133 @@ namespace MediAssist_Desktop_App.Model
 
 		}
 
+		public List<Login> getTable()
+		{
+			List<Login> table = new List<Login>();
+			try
+            {
+				
+
+				string query = "SELECT * FROM logins WHERE reg_status = '1';";
+
+				db.openConnection();
+				db.executeQuery(query);
+
+				var dr = db.cmd.ExecuteReader();
+
+				if (dr.HasRows)
+				{
+					while (dr.Read())
+					{
+						Login consumer = new Login();
+
+						consumer.ID = dr.GetInt32(0);
+						consumer.Username = dr.GetString(1);
+						consumer.Password = dr.GetString(2);
+						consumer.Role = dr.GetInt32(3);
+						consumer.Access = dr.GetInt32(4);
+						consumer.Reg_status = dr.GetInt32(5);
+						consumer.Email_id = dr.GetInt32(6);
+
+						ConsumersModel cm = new ConsumersModel();
+
+						consumer.Consumers_obj = cm.getConsumerOnOpenConnection(consumer.ID);
+
+						table.Add(consumer);
+					}
+				}
+
+				else
+				{
+					db.closeConnection();
+				}
+
+				db.closeConnection();
+			}
+
+			catch(Exception ex)
+            {
+
+            }
+			return table;
+		}
+
+
+		public bool acccptAllConsumers()
+		{
+			string query = "UPDATE logins SET reg_status = '2' WHERE reg_status = '1';";
+
+			try
+			{
+				db.openConnection();
+				db.executeQuery(query);
+				db.closeConnection();
+
+				return true;
+			}
+
+			catch (Exception ex)
+			{
+				return false;
+			}
+
+		}
+
+		public bool acccptConsumer(int id)
+		{
+			string query = "UPDATE logins SET reg_status = '2' WHERE reg_status = '1' AND id = '"+id+"';";
+
+			try
+			{
+				db.openConnection();
+				db.executeQuery(query);
+				db.closeConnection();
+
+				return true;
+			}
+
+			catch (Exception ex)
+			{
+				return false;
+			}
+
+		}
+
+		public bool rejectUser(Login login)
+		{
+			string query = "DELETE FROM logins WHERE id = '" + login.ID + "';";
+
+			try
+			{
+
+				ConsumersModel cm = new ConsumersModel();
+				bool delC = cm.rejectConsumer(login.ID);
+
+
+				if (delC)
+                {
+					db.openConnection();
+					db.executeQuery(query);
+					db.closeConnection();
+				}
+				else
+                {
+					return false;
+                }
+
+				EmailsModel em = new EmailsModel();
+				bool del = em.rejectMail(login.Email_id);
+
+
+				return del;
+			}
+
+			catch (Exception ex)
+			{
+				return false;
+			}
+
+		}
+
 	}
 }
