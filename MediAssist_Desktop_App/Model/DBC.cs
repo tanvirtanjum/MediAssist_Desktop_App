@@ -77,5 +77,23 @@ namespace MediAssist_Desktop_App
             }
 
         }
+
+        public int executeScaler(string query)
+        {
+            try
+            {
+                cmd = new SqlCommand(query, con);
+                Int32 id = (Int32)cmd.ExecuteScalar();
+
+                return id;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong.");
+                return 0;
+            }
+
+        }
     }
 }

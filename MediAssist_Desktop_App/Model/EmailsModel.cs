@@ -146,5 +146,38 @@ namespace MediAssist_Desktop_App.Model
 				return false;
 			}
 		}
+
+		public int insertEmail(Email email)
+		{
+			Email has = this.checkEmail(email.Mail);
+
+			Int32 id = 0;
+
+
+			string query = "INSERT INTO emails OUTPUT INSERTED.id VALUES('" + email.Mail + "');";
+
+			if (has == null)
+			{
+				try
+				{
+					db.openConnection();
+					id = (Int32) db.executeScaler(query);
+					db.closeConnection();
+
+
+					return id;
+				}
+
+				catch (Exception ex)
+				{
+					return id;
+				}
+			}
+
+			else
+			{
+				return id;
+			}
+		}
 	}
 }

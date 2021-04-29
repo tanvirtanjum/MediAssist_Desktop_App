@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MediAssist_Desktop_App.Entity;
 using MediAssist_Desktop_App.Model;
+using MediAssist_Desktop_App.Sealed_Class;
 
 namespace MediAssist_Desktop_App.Views.Admin
 {
@@ -226,11 +227,96 @@ namespace MediAssist_Desktop_App.Views.Admin
 
         private void addBtn_Click(object sender, RoutedEventArgs e)
         {
-           
+            bool validate = true;
+
+            string msg = "Error: ";
+
+            string name = nameTB.Text.Trim();
+            string username = usernameTB.Text.Trim();
+            int designation = designCB.SelectedIndex;
+            string salaryText = salaryTB.Text.Trim();
+            double salary;
+            bool isDouble = Double.TryParse(salaryText, out salary);
+            string bg = bgCB.SelectedItem.ToString();
+            string phone = phoneTB.Text.Trim();
+            string email = emailTB.Text.Trim();
+
+            if(name.Length<1)
+            {
+                validate = false;
+                msg += "\nName Required.";
+            }
+
+            if (username.Length < 1)
+            {
+                validate = false;
+                msg += "\nUsername Required.";
+            }
+
+            if (designation == 0)
+            {
+                validate = false;
+                msg += "\nDesigntion Required.";
+            }
+
+            if (!isDouble)
+            {
+                validate = false;
+                msg += "\nValid Salary Required.";
+            }
+
+            if (phone.Length < 11)
+            {
+                validate = false;
+                msg += "\nValid Mobile Number Required.";
+            }
+
+            EmailValidator ev = new EmailValidator();
+
+            if (!ev.ValidateEmail(email))
+            {
+                validate = false;
+                msg += "\nValid Email Required.";
+            }
+
+            if(!validate)
+            {
+                MessageBox.Show(msg);
+            }
+            else
+            {
+                Employee empInsert = new Employee();
+                empInsert.Name = name;
+                empInsert.Blood_group = bg;
+                empInsert.Phone = phone;
+                empInsert.Salary = salary;
+
+                Login logInsert = new Login();
+                logInsert.Username = username;
+                logInsert.Role = designation;
+
+                Email emInsert = new Email();
+                emInsert.Mail = email;
+
+                EmployeesModel em = new EmployeesModel();
+                int val = em.insertEmployee(empInsert, logInsert, emInsert);
+
+                if(val == 0)
+                {
+                    MessageBox.Show("Error:\nDuplicate Username/Password");
+                }
+                else
+                {
+                    MessageBox.Show("Error:\nEmployee Added.");
+                    refreshBtn_Click(sender, e);
+                }
+            }
         }
 
         private void refreshBtn_Click(object sender, RoutedEventArgs e)
         {
+            loaded_employee = null; 
+
             nameTB.Text = "";
             usernameTB.Text = "";
             usernameTB.IsReadOnly = false;
@@ -280,7 +366,89 @@ namespace MediAssist_Desktop_App.Views.Admin
 
         private void updateBtn_Click(object sender, RoutedEventArgs e)
         {
+            bool validate = true;
 
+            string msg = "Error: ";
+
+            string name = nameTB.Text.Trim();
+            string username = usernameTB.Text.Trim();
+            int designation = designCB.SelectedIndex;
+            string salaryText = salaryTB.Text.Trim();
+            double salary;
+            bool isDouble = Double.TryParse(salaryText, out salary);
+            string bg = bgCB.SelectedItem.ToString();
+            string phone = phoneTB.Text.Trim();
+            string email = emailTB.Text.Trim();
+
+            if (name.Length < 1)
+            {
+                validate = false;
+                msg += "\nName Required.";
+            }
+
+            if (username.Length < 1)
+            {
+                validate = false;
+                msg += "\nUsername Required.";
+            }
+
+            if (designation == 0)
+            {
+                validate = false;
+                msg += "\nDesigntion Required.";
+            }
+
+            if (!isDouble)
+            {
+                validate = false;
+                msg += "\nValid Salary Required.";
+            }
+
+            if (phone.Length < 11)
+            {
+                validate = false;
+                msg += "\nValid Mobile Number Required.";
+            }
+
+            EmailValidator ev = new EmailValidator();
+
+            if (!ev.ValidateEmail(email))
+            {
+                validate = false;
+                msg += "\nValid Email Required.";
+            }
+
+            if (!validate)
+            {
+                MessageBox.Show(msg);
+            }
+            else
+            {
+                string priv = loaded_employee.Login_obj.Email_obj.Mail;
+
+                Employee empUpdate = new Employee();
+                empUpdate = loaded_employee;
+                empUpdate.Name = name;
+                empUpdate.Blood_group = bg;
+                empUpdate.Phone = phone;
+                empUpdate.Salary = salary;
+                empUpdate.Login_obj.Role = designation;
+                empUpdate.Login_obj.Email_obj.Mail = email;
+
+                EmployeesModel em = new EmployeesModel();
+
+                bool val = em.updateEmployee(empUpdate, priv);
+
+                if (!val)
+                {
+                    MessageBox.Show("Error:\nDuplicate Email.");
+                }
+                else
+                {
+                    MessageBox.Show("Error:\nInformation Updated");
+                    refreshBtn_Click(sender, e);
+                }
+            }
         }
     }
 }

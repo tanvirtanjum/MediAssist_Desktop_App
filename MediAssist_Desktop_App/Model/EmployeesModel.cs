@@ -94,8 +94,6 @@ namespace MediAssist_Desktop_App.Model
 
 		}
 
-
-
 		public List<Employee> getTable()
 		{
 			List<Employee> table = new List<Employee>();
@@ -136,6 +134,109 @@ namespace MediAssist_Desktop_App.Model
 			db.closeConnection();
 
 			return table;
+		}
+
+		public int insertEmployee(Employee employee, Login login, Email email)
+		{
+			LoginsModel lm = new LoginsModel();
+			int login_id = lm.insertUser(login, email);
+
+			employee.Login_id = login_id;
+
+			Int32 id = 0;
+
+
+			string query = "INSERT INTO employees OUTPUT INSERTED.id VALUES('" + employee.Name + "', '"+ employee.Salary + "', '" + employee.Blood_group + "', '" + employee.Phone + "', '"+ employee.Login_id + "');";
+
+			if (login_id != 0)
+			{
+				try
+				{
+					db.openConnection();
+					id = (Int32)db.executeScaler(query);
+					db.closeConnection();
+
+					return id;
+				}
+
+				catch (Exception ex)
+				{
+					return id;
+				}
+			}
+
+			else
+			{
+				return id;
+			}
+		}
+
+		public bool updateEmployee(Employee employee, string priv)
+		{
+			string query = "UPDATE employees SET name = '" + employee.Name + "', salary = '" + employee.Salary + "', phone = '" + employee.Phone + "', blood_group = '" + employee.Blood_group + "' WHERE id = '" + employee.ID + "';";
+
+			try
+			{
+				if (employee.Login_obj.Email_obj.Mail != priv)
+				{
+					EmailsModel em = new EmailsModel();
+
+					bool mail = em.updateEmail(employee);
+
+					if (mail)
+					{
+						LoginsModel lm = new LoginsModel();
+
+						bool log = lm.changeRole(employee.Login_obj);
+
+						if(log)
+                        {
+							db.openConnection();
+							db.executeQuery(query);
+							db.closeConnection();
+							return true;
+						}
+						
+						else
+                        {
+							return false;
+						}
+						
+					}
+
+					else
+					{
+						return false;
+					}
+				}
+
+				else
+				{
+					LoginsModel lm = new LoginsModel();
+
+					bool log = lm.changeRole(employee.Login_obj);
+
+					if (log)
+					{
+						db.openConnection();
+						db.executeQuery(query);
+						db.closeConnection();
+						return true;
+					}
+
+					else
+					{
+						return false;
+					}
+				}
+
+			}
+
+			catch (Exception ex)
+			{
+				return false;
+			}
+
 		}
 
 	}

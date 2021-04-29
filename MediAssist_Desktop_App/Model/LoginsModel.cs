@@ -204,6 +204,60 @@ namespace MediAssist_Desktop_App.Model
 
 		}
 
+		public int insertUser(Login login, Email email)
+		{
+			EmailsModel em = new EmailsModel();
+			int email_id = em.insertEmail(email);
+
+			login.Email_id = email_id;
+
+			Int32 id = 0;
+
+
+			string query = "INSERT INTO logins OUTPUT INSERTED.id VALUES('" + login.Username + "', '1234', '"+login.Role+"', '1', '2', '"+login.Email_id+"');";
+
+			if (email_id != 0)
+			{
+				try
+				{
+					db.openConnection();
+					id = (Int32)db.executeScaler(query);
+					db.closeConnection();
+
+					return id;
+				}
+
+				catch (Exception ex)
+				{
+					return id;
+				}
+			}
+
+			else
+			{
+				return id;
+			}
+		}
+
+		public bool changeRole(Login login)
+		{
+			string query = "UPDATE logins SET role = '" + login.Role + "' WHERE id='" + login.ID + "';";
+
+			try
+			{
+				db.openConnection();
+				db.executeQuery(query);
+				db.closeConnection();
+
+				return true;
+			}
+
+			catch (Exception ex)
+			{
+				return false;
+			}
+
+		}
 
 	}
 }
