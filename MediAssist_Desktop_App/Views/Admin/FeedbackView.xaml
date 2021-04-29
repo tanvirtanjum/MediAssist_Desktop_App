@@ -65,6 +65,23 @@
                 <ImageBrush ImageSource="FeedbackIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
+        <GridSplitter HorizontalAlignment="Left" Height="643" Margin="215,78,0,-0.2" VerticalAlignment="Top" Width="743"/>
+
+        <DataGrid x:Name="feedbackDG" IsReadOnly="True" HorizontalAlignment="Left" Height="643" Margin="958,78,-0.4,-0.2" VerticalAlignment="Top" Width="436" FontSize="14" ColumnWidth="Auto" BorderBrush="Black" Background="#FF9C9C9C" MouseDoubleClick="load_data">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF1E7C00"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Label Content="From:" HorizontalAlignment="Left" Margin="215,87,0,0" VerticalAlignment="Top" Height="60" Width="82" RenderTransformOrigin="0.451,-0.395" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="cusTB" HorizontalAlignment="Left" Height="60" Margin="302,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="503" FontFamily="MV Boli" FontSize="18" IsReadOnly="True"/>
+        <TextBox x:Name="textTA" HorizontalAlignment="Left" Height="490" Margin="215,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="743" FontFamily="MV Boli" FontSize="18" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" IsReadOnly="True"/>
+        <Button x:Name="refreshBtn" Content="Refresh" HorizontalAlignment="Left" Margin="810,87,0,0" VerticalAlignment="Top" Width="148" Height="60" Background="#FF0A7CC0" BorderBrush="#FF0A7CC0" FontFamily="MV Boli" FontSize="18" Click="refreshBtn_Click" Visibility="Hidden"/>
 
     </Grid>
 </Window>
