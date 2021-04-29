@@ -93,5 +93,47 @@ namespace MediAssist_Desktop_App.Model
 			}
 
 		}
+
+		public List<Consumers> getTable()
+		{
+			List<Consumers> table = new List<Consumers>();
+
+			string query = "SELECT * FROM consumers;";
+
+			db.openConnection();
+			db.executeQuery(query);
+
+			var dr = db.cmd.ExecuteReader();
+
+			if (dr.HasRows)
+			{
+				while (dr.Read())
+				{
+					Consumers consumer = new Consumers();
+
+					consumer.ID = dr.GetInt32(0);
+					consumer.Name = dr.GetString(1);
+					consumer.Occupation = dr.GetString(2);
+					consumer.Blood_group = dr.GetString(3);
+					consumer.Phone = dr.GetString(4);
+					consumer.Login_id = dr.GetInt32(5);
+
+					LoginsModel lm = new LoginsModel();
+
+					consumer.Login_obj = lm.getInfoOnOpenConnection(consumer.Login_id);
+
+					table.Add(consumer);
+				}
+			}
+
+			else
+			{
+				db.closeConnection();
+			}
+
+			db.closeConnection();
+
+			return table;
+		}
 	}
 }
