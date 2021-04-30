@@ -14,21 +14,22 @@ using System.Windows.Shapes;
 using MediAssist_Desktop_App.Entity;
 using MediAssist_Desktop_App.Model;
 
-namespace MediAssist_Desktop_App.Views.Consumer
+namespace MediAssist_Desktop_App.Views.Manager
 {
     /// <summary>
-    /// Interaction logic for ConsumerDash.xaml
+    /// Interaction logic for MedicineManagement.xaml
     /// </summary>
-    public partial class ConsumerDash : Window
+    public partial class MedicineManagement : Window
     {
         Login session = null;
-        public ConsumerDash(Login user)
+        public MedicineManagement(Login user)
         {
-            session = user;
             InitializeComponent();
+
+            session = user;
         }
 
-        /*ROUTES -- CONSUMERS*/
+        /*ROUTES -- MANAGER*/
         //Start
 
         private void logoutBtn_Click(object sender, RoutedEventArgs e)
@@ -41,9 +42,9 @@ namespace MediAssist_Desktop_App.Views.Consumer
 
         private void HomeBtn_Click(object sender, RoutedEventArgs e)
         {
-           // ConsumerDash cd = new ConsumerDash(session);
-            //cd.Show();
-            //this.Close();
+            ManagerDash md = new ManagerDash(session);
+            md.Show();
+            this.Close();
         }
 
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
@@ -60,10 +61,28 @@ namespace MediAssist_Desktop_App.Views.Consumer
             this.Close();
         }
 
-        
+        private void MedicinesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //MedicineManagement mm = new MedicineManagement(session);
+            //mm.Show();
+            //this.Close();
+        }
+
+        private void PendingOrdersBtn_Click(object sender, RoutedEventArgs e)
+        {
+            PendingOrders po = new PendingOrders(session);
+            po.Show();
+            this.Close();
+        }
+
+        private void HistoryBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ShipmentsView sv = new ShipmentsView(session);
+            sv.Show();
+            this.Close();
+        }
 
         //End
-        /*ROUTES -- CONSUMERS*/
-
+        /*ROUTES -- MANAGER*/
     }
 }

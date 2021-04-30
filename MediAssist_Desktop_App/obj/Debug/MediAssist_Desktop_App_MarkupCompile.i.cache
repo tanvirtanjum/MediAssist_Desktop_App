@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\App.xaml
-201951464954
+23-1138090584
 
-461682173970
+49-1911517009
 14-788570704
-LoginView.xaml;Views\Admin\AboutUser.xaml;Views\Admin\AdminDash.xaml;Views\Admin\ConsumersManagement.xaml;Views\Admin\EmployeeManagement.xaml;Views\Admin\FeedbackView.xaml;Views\Admin\NotesWindow.xaml;Views\Admin\RegistrationManagement.xaml;Views\Consumer\AboutUser.xaml;Views\Consumer\ConsumerDash.xaml;Views\Consumer\NotesWindow.xaml;Views\DeliveryMan\AboutUser.xaml;Views\DeliveryMan\DeliveryManDash.xaml;Views\DeliveryMan\NotesWindow.xaml;Views\Doctor\AboutUser.xaml;Views\Doctor\DoctorDash.xaml;Views\Doctor\NotesWindow.xaml;Views\Manager\AboutUser.xaml;Views\Manager\ManagerDash.xaml;Views\Manager\NotesWindow.xaml;
+LoginView.xaml;Views\Admin\AboutUser.xaml;Views\Admin\AdminDash.xaml;Views\Admin\ConsumersManagement.xaml;Views\Admin\EmployeeManagement.xaml;Views\Admin\FeedbackView.xaml;Views\Admin\NotesWindow.xaml;Views\Admin\RegistrationManagement.xaml;Views\Consumer\AboutUser.xaml;Views\Consumer\ConsumerDash.xaml;Views\Consumer\NotesWindow.xaml;Views\DeliveryMan\AboutUser.xaml;Views\DeliveryMan\DeliveryManDash.xaml;Views\DeliveryMan\NotesWindow.xaml;Views\Doctor\AboutUser.xaml;Views\Doctor\DoctorDash.xaml;Views\Doctor\NotesWindow.xaml;Views\Manager\AboutUser.xaml;Views\Manager\ManagerDash.xaml;Views\Manager\MedicineManagement.xaml;Views\Manager\NotesWindow.xaml;Views\Manager\PendingOrders.xaml;Views\Manager\ShipmentsView.xaml;
 
 True
 

@@ -20,4 +20,7 @@ FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Doctor\NotesWin
 FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Manager\AboutUser.xaml;;
 FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Manager\ManagerDash.xaml;;
 FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Manager\NotesWindow.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Manager\MedicineManagement.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Manager\PendingOrders.xaml;;
+FW:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\Views\Manager\ShipmentsView.xaml;;
 

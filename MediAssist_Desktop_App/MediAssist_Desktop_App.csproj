@@ -137,8 +137,17 @@
     <Compile Include="Views\Manager\ManagerDash.xaml.cs">
       <DependentUpon>ManagerDash.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Manager\MedicineManagement.xaml.cs">
+      <DependentUpon>MedicineManagement.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Manager\NotesWindow.xaml.cs">
       <DependentUpon>NotesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manager\PendingOrders.xaml.cs">
+      <DependentUpon>PendingOrders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manager\ShipmentsView.xaml.cs">
+      <DependentUpon>ShipmentsView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -248,9 +257,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Manager\MedicineManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Manager\NotesWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Manager\PendingOrders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Manager\ShipmentsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -351,6 +372,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\Admin\FeedbackIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Consumer\MedicineIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Consumer\OrdersIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Consumer\ShipmentHistoryIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

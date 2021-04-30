@@ -48,6 +48,62 @@ namespace MediAssist_Desktop_App.Views.Manager
 
         }
 
+        /*ROUTES -- MANAGER*/
+        //Start
+
+        private void logoutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            session = null;
+            LoginView lv = new LoginView();
+            lv.Show();
+            this.Close();
+        }
+
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ManagerDash md = new ManagerDash(session);
+            md.Show();
+            this.Close();
+        }
+
+        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //AboutUser au = new AboutUser(session);
+            //au.Show();
+            //this.Close();
+        }
+
+        private void NoteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NotesWindow nw = new NotesWindow(session);
+            nw.Show();
+            this.Close();
+        }
+
+        private void MedicinesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MedicineManagement mm = new MedicineManagement(session);
+            mm.Show();
+            this.Close();
+        }
+
+        private void PendingOrdersBtn_Click(object sender, RoutedEventArgs e)
+        {
+            PendingOrders po = new PendingOrders(session);
+            po.Show();
+            this.Close();
+        }
+
+        private void HistoryBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ShipmentsView sv = new ShipmentsView(session);
+            sv.Show();
+            this.Close();
+        }
+
+        //End
+        /*ROUTES -- MANAGER*/
+
         public void fillup(Login session)
         {
             EmployeesModel em = new EmployeesModel();
@@ -223,26 +279,5 @@ namespace MediAssist_Desktop_App.Views.Manager
 
         }
 
-        private void logoutBtn_Click(object sender, RoutedEventArgs e)
-        {
-            session = null;
-            LoginView lv = new LoginView();
-            lv.Show();
-            this.Close();
-        }
-
-        private void HomeBtn_Click(object sender, RoutedEventArgs e)
-        {
-            ManagerDash md = new ManagerDash(session);
-            md.Show();
-            this.Close();
-        }
-
-        private void NoteBtn_Click(object sender, RoutedEventArgs e)
-        {
-            NotesWindow nw = new NotesWindow(session);
-            nw.Show();
-            this.Close();
-        }
     }
 }

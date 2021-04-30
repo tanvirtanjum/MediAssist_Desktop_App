@@ -51,3 +51,9 @@ W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Admin\
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Admin\EmployeeManagement.baml
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Admin\FeedbackView.baml
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Admin\RegistrationManagement.baml
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Manager\MedicineManagement.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Manager\PendingOrders.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Manager\ShipmentsView.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Manager\MedicineManagement.baml
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Manager\PendingOrders.baml
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Manager\ShipmentsView.baml

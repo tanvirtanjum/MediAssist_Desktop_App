@@ -29,6 +29,9 @@ namespace MediAssist_Desktop_App.Views.Manager
             InitializeComponent();
         }
 
+        /*ROUTES -- MANAGER*/
+        //Start
+
         private void logoutBtn_Click(object sender, RoutedEventArgs e)
         {
             session = null;
@@ -39,7 +42,7 @@ namespace MediAssist_Desktop_App.Views.Manager
 
         private void HomeBtn_Click(object sender, RoutedEventArgs e)
         {
-            ///ManagerDash md = new ManagerDash(session);
+            //ManagerDash md = new ManagerDash(session);
             //md.Show();
             //this.Close();
         }
@@ -57,5 +60,29 @@ namespace MediAssist_Desktop_App.Views.Manager
             nw.Show();
             this.Close();
         }
+
+        private void MedicinesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MedicineManagement mm = new MedicineManagement(session);
+            mm.Show();
+            this.Close();
+        }
+
+        private void PendingOrdersBtn_Click(object sender, RoutedEventArgs e)
+        {
+            PendingOrders po = new PendingOrders(session);
+            po.Show();
+            this.Close();
+        }
+
+        private void HistoryBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ShipmentsView sv = new ShipmentsView(session);
+            sv.Show();
+            this.Close();
+        }
+
+        //End
+        /*ROUTES -- MANAGER*/
     }
 }
