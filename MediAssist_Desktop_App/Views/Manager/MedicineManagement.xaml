@@ -59,6 +59,34 @@
                 <ImageBrush ImageSource="/MediAssist_Desktop_App;component/Views/Consumer/ShipmentHistoryIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
+        <GridSplitter x:Name="split" HorizontalAlignment="Left" Height="643" Margin="215,78,0,-0.2" VerticalAlignment="Top" Width="622"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="220,113,0,0" VerticalAlignment="Top" Height="34" Width="139" FontFamily="MV Boli" FontSize="18"/>
+        <Label Content="Distributor:" HorizontalAlignment="Left" Margin="220,157,0,0" VerticalAlignment="Top" Height="34" Width="139" FontFamily="MV Boli" FontSize="18"/>
+        <Label Content="Type:" HorizontalAlignment="Left" Margin="220,198,0,0" VerticalAlignment="Top" Height="34" Width="139" FontFamily="MV Boli" FontSize="18"/>
+        <Label Content="Price:" HorizontalAlignment="Left" Margin="220,244,0,0" VerticalAlignment="Top" Height="34" Width="139" FontFamily="MV Boli" FontSize="18"/>
+        <Label Content="Quantity:" HorizontalAlignment="Left" Margin="220,283,0,0" VerticalAlignment="Top" Height="34" Width="139" FontFamily="MV Boli" FontSize="18"/>
+        <Label Content="Availability:" HorizontalAlignment="Left" Margin="220,322,0,0" VerticalAlignment="Top" Height="34" Width="139" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="nameTB" HorizontalAlignment="Left" Height="34" Margin="359,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="disTB" HorizontalAlignment="Left" Height="34" Margin="359,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="priceTB" HorizontalAlignment="Left" Height="34" Margin="359,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="quanTB" HorizontalAlignment="Left" Height="34" Margin="359,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" FontFamily="MV Boli" FontSize="18"/>
+        <ComboBox x:Name="typeCB" HorizontalAlignment="Left" Margin="359,201,0,0" VerticalAlignment="Top" Width="384" Height="34" FontFamily="MV Boli" FontSize="18"/>
+        <ComboBox x:Name="availCB" HorizontalAlignment="Left" Margin="359,328,0,0" VerticalAlignment="Top" Width="384" Height="34" FontFamily="MV Boli" FontSize="18"/>
+        <ComboBox x:Name="sortCB" HorizontalAlignment="Left" Margin="837,78,0,0" VerticalAlignment="Top" Width="550" Height="34" FontFamily="MV Boli" FontSize="18" SelectionChanged="sortCB_SelectionChanged"/>
+        <DataGrid x:Name="medicinesDG" IsReadOnly="True" HorizontalAlignment="Left" Height="609" Margin="837,112,-0.4,-0.2" VerticalAlignment="Top" Width="557" FontSize="14" ColumnWidth="Auto" BorderBrush="Black" Background="#FF9C9C9C" MouseDoubleClick="load_data">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF1E7C00"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Button x:Name="addBtn" Content="Add" HorizontalAlignment="Left" Margin="428,405,0,0" VerticalAlignment="Top" Width="145" Height="50" FontFamily="MV Boli" FontSize="18" Background="#FF1B8ABA" BorderBrush="{x:Null}" Click="addBtn_Click"/>
+        <Button x:Name="updateBtn" Content="Update" HorizontalAlignment="Left" Margin="278,405,0,0" VerticalAlignment="Top" Width="145" Height="50" FontFamily="MV Boli" FontSize="18" Background="#FF1BBA34" BorderBrush="{x:Null}" Visibility="Hidden" Click="updateBtn_Click"/>
+        <Button x:Name="refreshBtn" Content="Refresh" HorizontalAlignment="Left" Margin="578,405,0,0" VerticalAlignment="Top" Width="145" Height="50" FontFamily="MV Boli" FontSize="18" Background="#FFBA6B1B" BorderBrush="{x:Null}" Visibility="Hidden" Click="refreshBtn_Click"/>
 
     </Grid>
 </Window>

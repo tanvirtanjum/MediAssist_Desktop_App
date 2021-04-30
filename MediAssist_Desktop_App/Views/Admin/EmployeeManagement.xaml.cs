@@ -259,7 +259,7 @@ namespace MediAssist_Desktop_App.Views.Admin
                 msg += "\nDesigntion Required.";
             }
 
-            if (!isDouble)
+            if (!isDouble || salary < 1)
             {
                 validate = false;
                 msg += "\nValid Salary Required.";
