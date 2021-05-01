@@ -17,16 +17,16 @@ using MediAssist_Desktop_App.Model;
 namespace MediAssist_Desktop_App.Views.Doctor
 {
     /// <summary>
-    /// Interaction logic for DoctorDash.xaml
+    /// Interaction logic for ReportsView.xaml
     /// </summary>
-    public partial class DoctorDash : Window
+    public partial class ReportsView : Window
     {
-        Login session = null;
-        public DoctorDash(Login user)
+        Login session;
+        public ReportsView(Login user)
         {
-            session = user;
-
             InitializeComponent();
+
+            session = user;
         }
 
         /* ROUTES--DOCTOR */
@@ -41,9 +41,9 @@ namespace MediAssist_Desktop_App.Views.Doctor
 
         private void HomeBtn_Click(object sender, RoutedEventArgs e)
         {
-            //DoctorDash dd = new DoctorDash(session);
-            //dd.Show();
-            //this.Close();
+            DoctorDash dd = new DoctorDash(session);
+            dd.Show();
+            this.Close();
         }
 
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
@@ -69,13 +69,12 @@ namespace MediAssist_Desktop_App.Views.Doctor
 
         private void ReportBtn_Click(object sender, RoutedEventArgs e)
         {
-            ReportsView rv = new ReportsView(session);
-            rv.Show();
-            this.Close();
+            //ReportsView rv = new ReportsView(session);
+            //rv.Show();
+            //this.Close();
         }
 
         //End
         /* ROUTES--DOCTOR */
-
     }
 }

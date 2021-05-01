@@ -37,6 +37,54 @@ namespace MediAssist_Desktop_App.Views.Doctor
             LoadTable();
         }
 
+        /* ROUTES--DOCTOR */
+        //Start
+        private void logoutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            session = null;
+            LoginView lv = new LoginView();
+            lv.Show();
+            this.Close();
+        }
+
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DoctorDash dd = new DoctorDash(session);
+            dd.Show();
+            this.Close();
+        }
+
+        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AboutUser au = new AboutUser(session);
+            au.Show();
+            this.Close();
+        }
+
+        private void NoteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //NotesWindow nw = new NotesWindow(session);
+            //nw.Show();
+            //this.Close();
+        }
+
+        private void AppointmentBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AppointmentView av = new AppointmentView(session);
+            av.Show();
+            this.Close();
+        }
+
+        private void ReportBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ReportsView rv = new ReportsView(session);
+            rv.Show();
+            this.Close();
+        }
+
+        //End
+        /* ROUTES--DOCTOR */
+
         private void LoadTable()
         {
             NotesModel nm = new NotesModel();
@@ -76,28 +124,6 @@ namespace MediAssist_Desktop_App.Views.Doctor
             {
                 MessageBox.Show("NO DATA.");
             }
-        }
-
-        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
-        {
-            AboutUser au = new AboutUser(session);
-            au.Show();
-            this.Close();
-        }
-
-        private void HomeBtn_Click(object sender, RoutedEventArgs e)
-        {
-            DoctorDash dd = new DoctorDash(session);
-            dd.Show();
-            this.Close();
-        }
-
-        private void logoutBtn_Click(object sender, RoutedEventArgs e)
-        {
-            session = null;
-            LoginView lv = new LoginView();
-            lv.Show();
-            this.Close();
         }
 
         private void refreshBtn_Click(object sender, RoutedEventArgs e)

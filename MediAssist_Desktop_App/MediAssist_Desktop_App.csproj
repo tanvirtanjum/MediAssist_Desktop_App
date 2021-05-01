@@ -64,6 +64,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Entity\Access.cs" />
+    <Compile Include="Entity\Appointment.cs" />
+    <Compile Include="Entity\Appointment_Status.cs" />
     <Compile Include="Entity\Availability.cs" />
     <Compile Include="Entity\Cart.cs" />
     <Compile Include="Entity\Consumers.cs" />
@@ -81,6 +83,8 @@
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\AccessModel.cs" />
+    <Compile Include="Model\AppointmentsModel.cs" />
+    <Compile Include="Model\Appointment_StatusModel.cs" />
     <Compile Include="Model\AvailabilityModel.cs" />
     <Compile Include="Model\CartsModel.cs" />
     <Compile Include="Model\ConsumersModel.cs" />
@@ -137,11 +141,17 @@
     <Compile Include="Views\Doctor\AboutUser.xaml.cs">
       <DependentUpon>AboutUser.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Doctor\AppointmentView.xaml.cs">
+      <DependentUpon>AppointmentView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Doctor\DoctorDash.xaml.cs">
       <DependentUpon>DoctorDash.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Doctor\NotesWindow.xaml.cs">
       <DependentUpon>NotesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Doctor\ReportsView.xaml.cs">
+      <DependentUpon>ReportsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Manager\AboutUser.xaml.cs">
       <DependentUpon>AboutUser.xaml</DependentUpon>
@@ -253,6 +263,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\Doctor\AppointmentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Doctor\DoctorDash.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -260,6 +274,10 @@
     <Page Include="Views\Doctor\NotesWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Doctor\ReportsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Manager\AboutUser.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -393,6 +411,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\Consumer\ShipmentHistoryIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Doctor\AppointmentIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Doctor\ReportIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

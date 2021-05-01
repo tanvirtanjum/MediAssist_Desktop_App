@@ -1,11 +1,11 @@
-﻿<Window x:Class="MediAssist_Desktop_App.Views.Doctor.DoctorDash"
+﻿<Window x:Class="MediAssist_Desktop_App.Views.Doctor.AppointmentView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MediAssist_Desktop_App.Views.Doctor"
         mc:Ignorable="d"
-       Title="MediAssist/Doctor/Dashboard" Height="750" Width="1400"
+        Title="MediAssist/Doctor/Appoinments" Height="750" Width="1400"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize">
     <Grid>
@@ -53,6 +53,28 @@
                 <ImageBrush ImageSource="ReportIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
+        <GridSplitter HorizontalAlignment="Left" Height="643" Margin="215,78,0,-0.2" VerticalAlignment="Top" Width="760"/>
+        <DataGrid x:Name="appointmentsDG" IsReadOnly="True" HorizontalAlignment="Left" Height="579" Margin="975,142,-0.4,-0.2" VerticalAlignment="Top" Width="419" FontSize="14" ColumnWidth="Auto" BorderBrush="Black" Background="#FF9C9C9C" MouseDoubleClick="load_data">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF1E7C00"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <ComboBox x:Name="sortCB" HorizontalAlignment="Left" Margin="975,78,0,0" VerticalAlignment="Top" Width="416" Height="64" SelectionChanged="sortCB_SelectionChanged" FontFamily="MV Boli" FontSize="18"/>
+        <Label Content="Patient Details:" HorizontalAlignment="Left" Margin="215,83,0,0" VerticalAlignment="Top" Height="59" Width="154" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="detailTB" HorizontalAlignment="Left" Height="149" Margin="369,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601" FontFamily="MV Boli" FontSize="18" AcceptsReturn="True" IsReadOnly="True"/>
+        <Label Content="Issue:" HorizontalAlignment="Left" Margin="215,248,0,0" VerticalAlignment="Top" Height="59" Width="154" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="issueTB" HorizontalAlignment="Left" Height="204" Margin="369,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601" FontFamily="MV Boli" FontSize="18" AcceptsReturn="True" IsReadOnly="True"/>
+        <Label Content="Meeting Date:" HorizontalAlignment="Left" Margin="215,467,0,0" VerticalAlignment="Top" Height="59" Width="154" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="dateTB" HorizontalAlignment="Left" Height="59" Margin="369,467,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="507" FontFamily="MV Boli" FontSize="18"/>
+        <Button x:Name="approveBtn" Content="Approve" HorizontalAlignment="Left" Margin="310,584,0,0" VerticalAlignment="Top" Width="113" Height="42" FontFamily="MV Boli" FontSize="18" Background="#FF12C807" Click="approveBtn_Click" Visibility="Hidden"/>
+        <Button x:Name="rejectBtn" Content="Reject" HorizontalAlignment="Left" Margin="531,584,0,0" VerticalAlignment="Top" Width="113" Height="42" FontFamily="MV Boli" FontSize="18" Background="#FFC83807" Click="rejectBtn_Click" Visibility="Hidden"/>
+        <Button x:Name="refreshBtn" Content="Refresh" HorizontalAlignment="Left" Margin="759,584,0,0" VerticalAlignment="Top" Width="113" Height="42" FontFamily="MV Boli" FontSize="18" Background="#FF0771C8" Click="refreshBtn_Click" Visibility="Hidden"/>
 
     </Grid>
 </Window>
