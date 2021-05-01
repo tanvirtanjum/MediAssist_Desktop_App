@@ -29,6 +29,8 @@ namespace MediAssist_Desktop_App.Views.DeliveryMan
             InitializeComponent();
         }
 
+        /*ROUTES -- DeliveryMan*/
+        //Start
         private void logoutBtn_Click(object sender, RoutedEventArgs e)
         {
             session = null;
@@ -39,9 +41,9 @@ namespace MediAssist_Desktop_App.Views.DeliveryMan
 
         private void HomeBtn_Click(object sender, RoutedEventArgs e)
         {
-            DeliveryManDash dmd = new DeliveryManDash(session);
-            dmd.Show();
-            this.Close();
+            //DeliveryManDash dmd = new DeliveryManDash(session);
+            //dmd.Show();
+            //this.Close();
         }
 
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
@@ -57,5 +59,16 @@ namespace MediAssist_Desktop_App.Views.DeliveryMan
             nw.Show();
             this.Close();
         }
+
+        private void ShipmentsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ShipmentsView sv = new ShipmentsView(session);
+            sv.Show();
+            this.Close();
+        }
+
+        //End
+        /*ROUTES -- DeliveryMan*/
+
     }
 }

@@ -140,6 +140,9 @@
     <Compile Include="Views\DeliveryMan\NotesWindow.xaml.cs">
       <DependentUpon>NotesWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DeliveryMan\ShipmentsView.xaml.cs">
+      <DependentUpon>ShipmentsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Doctor\AboutUser.xaml.cs">
       <DependentUpon>AboutUser.xaml</DependentUpon>
     </Compile>
@@ -260,6 +263,10 @@
     <Page Include="Views\DeliveryMan\NotesWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DeliveryMan\ShipmentsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Doctor\AboutUser.xaml">
       <Generator>MSBuild:Compile</Generator>

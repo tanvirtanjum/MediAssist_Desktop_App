@@ -1,11 +1,11 @@
-﻿<Window x:Class="MediAssist_Desktop_App.Views.DeliveryMan.DeliveryManDash"
+﻿<Window x:Class="MediAssist_Desktop_App.Views.DeliveryMan.ShipmentsView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MediAssist_Desktop_App.Views.DeliveryMan"
         mc:Ignorable="d"
-        Title="MediAssist/DeliveryMan/Dashboard" Height="750" Width="1400"
+        Title="MediAssist/DeliveryMan/Shipments" Height="750" Width="1400"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize">
     <Grid>
@@ -47,7 +47,23 @@
                 <ImageBrush ImageSource="/MediAssist_Desktop_App;component/Views/Consumer/ShipmentHistoryIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
+        <GridSplitter HorizontalAlignment="Left" Height="643" Margin="215,78,0,-0.2" VerticalAlignment="Top" Width="572"/>
+        <DataGrid x:Name="orderDG" IsReadOnly="True" HorizontalAlignment="Left" Height="572" Margin="792,149,-0.4,-0.2" VerticalAlignment="Top" Width="602" FontSize="14" ColumnWidth="Auto" BorderBrush="Black" Background="#FF9C9C9C" MouseDoubleClick="load_data">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF1E7C00"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <TextBox x:Name="detailsTB" HorizontalAlignment="Left" AcceptsReturn="True" Height="551" Margin="215,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="577" FontFamily="MV Boli" FontSize="18" IsReadOnly="True"/>
+        <Button x:Name="refreshBtn" Content="Refresh" HorizontalAlignment="Left" Margin="220,642,0,0" VerticalAlignment="Top" Width="173" Height="52" FontFamily="MV Boli" FontSize="36" Background="#FF2FCAD3" BorderBrush="#FF2FCAD3" OpacityMask="#FF2FCAD3" Click="refreshBtn_Click" Visibility="Hidden"/>
+        <Button x:Name="deliveredBtn" Content="Accepted" HorizontalAlignment="Left" Margin="421,642,0,0" VerticalAlignment="Top" Width="173" Height="52" FontFamily="MV Boli" FontSize="36" Background="#FF2F7ED3" BorderBrush="#FF2FCAD3" OpacityMask="#FF2FCAD3" Click="deliveredBtn_Click" Visibility="Hidden"/>
+        <Button x:Name="returnedBtn" Content="Returned" HorizontalAlignment="Left" Margin="619,642,0,0" VerticalAlignment="Top" Width="173" Height="52" FontFamily="MV Boli" FontSize="36" Background="#FFD34C2F" BorderBrush="#FF2FCAD3" OpacityMask="#FF2FCAD3" Click="returnedBtn_Click" Visibility="Hidden"/>
+        <ComboBox x:Name="sortCB" HorizontalAlignment="Left" Margin="792,78,0,0" VerticalAlignment="Top" Width="592" Height="71" SelectionChanged="sortCB_SelectionChanged" FontFamily="MV Boli" FontSize="18"/>
 
     </Grid>
-
 </Window>

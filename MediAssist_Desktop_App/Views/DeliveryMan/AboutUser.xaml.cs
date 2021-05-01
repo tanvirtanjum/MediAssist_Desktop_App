@@ -48,6 +48,47 @@ namespace MediAssist_Desktop_App.Views.DeliveryMan
 
         }
 
+        /*ROUTES -- DeliveryMan*/
+        //Start
+        private void logoutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            session = null;
+            LoginView lv = new LoginView();
+            lv.Show();
+            this.Close();
+        }
+
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DeliveryManDash dmd = new DeliveryManDash(session);
+            dmd.Show();
+            this.Close();
+        }
+
+        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //AboutUser au = new AboutUser(session);
+            //au.Show();
+            //this.Close();
+        }
+
+        private void NoteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NotesWindow nw = new NotesWindow(session);
+            nw.Show();
+            this.Close();
+        }
+
+        private void ShipmentsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ShipmentsView sv = new ShipmentsView(session);
+            sv.Show();
+            this.Close();
+        }
+
+        //End
+        /*ROUTES -- DeliveryMan*/
+
         public void fillup(Login session)
         {
             EmployeesModel em = new EmployeesModel();
@@ -223,26 +264,5 @@ namespace MediAssist_Desktop_App.Views.DeliveryMan
 
         }
 
-        private void logoutBtn_Click(object sender, RoutedEventArgs e)
-        {
-            session = null;
-            LoginView lv = new LoginView();
-            lv.Show();
-            this.Close();
-        }
-
-        private void HomeBtn_Click(object sender, RoutedEventArgs e)
-        {
-            DeliveryManDash dmd = new DeliveryManDash(session);
-            dmd.Show();
-            this.Close();
-        }
-
-        private void NoteBtn_Click(object sender, RoutedEventArgs e)
-        {
-            NotesWindow nw = new NotesWindow(session);
-            nw.Show();
-            this.Close();
-        }
     }
 }
