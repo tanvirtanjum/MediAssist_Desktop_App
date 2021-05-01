@@ -74,6 +74,20 @@ namespace MediAssist_Desktop_App.Views.Consumer
             this.Close();
         }
 
+        private void reportBtn_Click(object sender, RoutedEventArgs e)
+        {
+            PrescriptionView pv = new PrescriptionView(session);
+            pv.Show();
+            this.Close();
+        }
+
+        private void appontmentBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AppointmentView av = new AppointmentView(session);
+            av.Show();
+            this.Close();
+        }
+
 
 
         //End

@@ -67,3 +67,7 @@ W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Consum
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Consumer\ShopView.g.cs
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Consumer\HistoryView.baml
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Consumer\ShopView.baml
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Consumer\AppointmentView.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Consumer\PrescriptionView.g.cs
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Consumer\AppointmentView.baml
+W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\obj\Debug\Views\Consumer\PrescriptionView.baml

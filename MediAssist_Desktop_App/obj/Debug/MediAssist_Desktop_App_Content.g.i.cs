@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/consumer/puchasehisoryicon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/consumer/consumerappointmenticon.png")]
 
 

@@ -53,6 +53,18 @@
                 <ImageBrush ImageSource="PuchaseHisoryIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
+        <Button x:Name="reportBtn" Content="Prescriptions " HorizontalAlignment="Right" Margin="0,457,1178.6,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="reportBtn_Click" />
+        <Label Content="" HorizontalAlignment="Left" Margin="0,457,0,0" VerticalAlignment="Top" Height="50" Width="67">
+            <Label.Background>
+                <ImageBrush ImageSource="ConsumerReportIcon.png" Stretch="Uniform"/>
+            </Label.Background>
+        </Label>
+        <Button x:Name="appontmentBtn" Content="Appointment" HorizontalAlignment="Right" Margin="0,512,1178.6,0" VerticalAlignment="Top" Width="148" Height="50" BorderBrush="{x:Null}" FontSize="22" FontFamily="MV Boli" Foreground="White" Background="{x:Null}" Click="appontmentBtn_Click" />
+        <Label Content="" HorizontalAlignment="Left" Margin="0,512,0,0" VerticalAlignment="Top" Height="50" Width="67">
+            <Label.Background>
+                <ImageBrush ImageSource="ConsumerAppointmentIcon.png" Stretch="Uniform"/>
+            </Label.Background>
+        </Label>
     </Grid>
 </Window>
 

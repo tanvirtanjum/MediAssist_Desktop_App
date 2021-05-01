@@ -17,12 +17,12 @@ using MediAssist_Desktop_App.Model;
 namespace MediAssist_Desktop_App.Views.Consumer
 {
     /// <summary>
-    /// Interaction logic for ShopView.xaml
+    /// Interaction logic for PrescriptionView.xaml
     /// </summary>
-    public partial class ShopView : Window
+    public partial class PrescriptionView : Window
     {
         Login session;
-        public ShopView(Login user)
+        public PrescriptionView(Login user)
         {
             InitializeComponent();
 
@@ -63,9 +63,9 @@ namespace MediAssist_Desktop_App.Views.Consumer
 
         private void shopBtn_Click(object sender, RoutedEventArgs e)
         {
-            //ShopView sv = new ShopView(session);
-            //sv.Show();
-            //this.Close();
+            ShopView sv = new ShopView(session);
+            sv.Show();
+            this.Close();
         }
 
         private void puchaseHistoryBtn_Click(object sender, RoutedEventArgs e)
@@ -77,9 +77,9 @@ namespace MediAssist_Desktop_App.Views.Consumer
 
         private void reportBtn_Click(object sender, RoutedEventArgs e)
         {
-            PrescriptionView pv = new PrescriptionView(session);
-            pv.Show();
-            this.Close();
+            //PrescriptionView pv = new PrescriptionView(session);
+            //pv.Show();
+            //this.Close();
         }
 
         private void appontmentBtn_Click(object sender, RoutedEventArgs e)
