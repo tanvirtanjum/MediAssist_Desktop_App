@@ -128,8 +128,14 @@
     <Compile Include="Views\Consumer\ConsumerDash.xaml.cs">
       <DependentUpon>ConsumerDash.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Consumer\HistoryView.xaml.cs">
+      <DependentUpon>HistoryView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Consumer\NotesWindow.xaml.cs">
       <DependentUpon>NotesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Consumer\ShopView.xaml.cs">
+      <DependentUpon>ShopView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DeliveryMan\AboutUser.xaml.cs">
       <DependentUpon>AboutUser.xaml</DependentUpon>
@@ -248,9 +254,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Consumer\HistoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Consumer\NotesWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Consumer\ShopView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DeliveryMan\AboutUser.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -426,6 +440,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\Doctor\ReportIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Consumer\ShopCartIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Consumer\PuchaseHisoryIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

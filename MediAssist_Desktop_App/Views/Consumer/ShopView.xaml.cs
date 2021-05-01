@@ -17,15 +17,16 @@ using MediAssist_Desktop_App.Model;
 namespace MediAssist_Desktop_App.Views.Consumer
 {
     /// <summary>
-    /// Interaction logic for ConsumerDash.xaml
+    /// Interaction logic for ShopView.xaml
     /// </summary>
-    public partial class ConsumerDash : Window
+    public partial class ShopView : Window
     {
-        Login session = null;
-        public ConsumerDash(Login user)
+        Login session;
+        public ShopView(Login user)
         {
-            session = user;
             InitializeComponent();
+
+            session = user;
         }
 
         /*ROUTES -- CONSUMERS*/
@@ -41,9 +42,9 @@ namespace MediAssist_Desktop_App.Views.Consumer
 
         private void HomeBtn_Click(object sender, RoutedEventArgs e)
         {
-            //ConsumerDash cd = new ConsumerDash(session);
-            //cd.Show();
-            //this.Close();
+            ConsumerDash cd = new ConsumerDash(session);
+            cd.Show();
+            this.Close();
         }
 
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
@@ -62,9 +63,9 @@ namespace MediAssist_Desktop_App.Views.Consumer
 
         private void shopBtn_Click(object sender, RoutedEventArgs e)
         {
-            ShopView sv = new ShopView(session);
-            sv.Show();
-            this.Close();
+            //ShopView sv = new ShopView(session);
+            //sv.Show();
+            //this.Close();
         }
 
         private void puchaseHistoryBtn_Click(object sender, RoutedEventArgs e)
@@ -77,7 +78,5 @@ namespace MediAssist_Desktop_App.Views.Consumer
 
 
         //End
-        /*ROUTES -- CONSUMERS*/
-
     }
 }

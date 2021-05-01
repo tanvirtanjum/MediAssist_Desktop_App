@@ -17,15 +17,16 @@ using MediAssist_Desktop_App.Model;
 namespace MediAssist_Desktop_App.Views.Consumer
 {
     /// <summary>
-    /// Interaction logic for ConsumerDash.xaml
+    /// Interaction logic for HistoryView.xaml
     /// </summary>
-    public partial class ConsumerDash : Window
+    public partial class HistoryView : Window
     {
-        Login session = null;
-        public ConsumerDash(Login user)
+        Login session;
+        public HistoryView(Login user)
         {
-            session = user;
             InitializeComponent();
+
+            session = user;
         }
 
         /*ROUTES -- CONSUMERS*/
@@ -41,9 +42,9 @@ namespace MediAssist_Desktop_App.Views.Consumer
 
         private void HomeBtn_Click(object sender, RoutedEventArgs e)
         {
-            //ConsumerDash cd = new ConsumerDash(session);
-            //cd.Show();
-            //this.Close();
+            ConsumerDash cd = new ConsumerDash(session);
+            cd.Show();
+            this.Close();
         }
 
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
@@ -69,15 +70,13 @@ namespace MediAssist_Desktop_App.Views.Consumer
 
         private void puchaseHistoryBtn_Click(object sender, RoutedEventArgs e)
         {
-            HistoryView hv = new HistoryView(session);
-            hv.Show();
-            this.Close();
+            //HistoryView hv = new HistoryView(session);
+            //hv.Show();
+            //this.Close();
         }
 
 
 
         //End
-        /*ROUTES -- CONSUMERS*/
-
     }
 }
