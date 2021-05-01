@@ -9,6 +9,7 @@ namespace MediAssist_Desktop_App.Entity
     public class Report
     {
         int id;
+        string subject;
         string report_txt;
         int prescribe_by;
         int prescribe_for;
@@ -22,6 +23,11 @@ namespace MediAssist_Desktop_App.Entity
             set { id = value; }
         }
 
+        public string Subject
+        {
+            get { return subject; }
+            set { subject = value; }
+        }
         public string Report_txt
         {
             get { return report_txt; }

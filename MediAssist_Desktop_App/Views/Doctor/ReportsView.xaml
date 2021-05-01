@@ -53,6 +53,41 @@
                 <ImageBrush ImageSource="ReportIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
+        <GridSplitter HorizontalAlignment="Left" Height="643" Margin="220,78,0,-0.2" VerticalAlignment="Top" Width="495"/>
+        <Label Content="Prescribe  To:" HorizontalAlignment="Left" Margin="215,78,0,0" VerticalAlignment="Top" Height="42" Width="139" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="prescribetoTB" HorizontalAlignment="Left" Height="42" Margin="359,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontFamily="MV Boli" FontSize="18" IsReadOnly="True"/>
+        <Label Content="Subject:" HorizontalAlignment="Left" Margin="215,125,0,0" VerticalAlignment="Top" Height="42" Width="139" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="subjectTB" HorizontalAlignment="Left" Height="42" Margin="359,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" FontFamily="MV Boli" FontSize="18" IsReadOnly="false"/>
+        <Label Content="Report:" HorizontalAlignment="Left" Margin="215,172,0,0" VerticalAlignment="Top" Height="42" Width="139" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="reportTB" HorizontalAlignment="Left" AcceptsReturn="True" Height="259" Margin="220,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="495" FontFamily="MV Boli" FontSize="18"/>
+        <DataGrid x:Name="reportDG" IsReadOnly="false" HorizontalAlignment="Left" Height="577" Margin="1058,144,-0.4,-0.2" VerticalAlignment="Top" Width="336" FontSize="14" ColumnWidth="Auto" BorderBrush="Black" Background="#FF9C9C9C" MouseDoubleClick="load_data">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF1E7C00"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Label Content="           Given Reports" HorizontalAlignment="Left" Margin="1058,78,-1.4,0" VerticalAlignment="Top" Height="69" Width="337" Background="#FF2276A2" FontFamily="MV Boli" FontSize="18"/>
+        <DataGrid x:Name="consumerDG" HorizontalAlignment="Left" Height="577" Margin="720,144,0,-0.2" VerticalAlignment="Top" Width="336" FontSize="14" ColumnWidth="Auto" BorderBrush="Black" Background="#FF9C9C9C" MouseDoubleClick="load_del_data">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF1E7C00"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Label Content="    Select Consumer To Prescribe" HorizontalAlignment="Left" Margin="720,78,0,0" VerticalAlignment="Top" Height="69" Width="338" Background="#FF2276A2" FontFamily="MV Boli" FontSize="18"/>
+        <Button x:Name="refreshBtn" Content="Refresh" HorizontalAlignment="Left" Margin="563,78,0,0" VerticalAlignment="Top" Width="155" Height="42" FontFamily="MV Boli" FontSize="18" Background="#FF08ACC3" Click="refreshBtn_Click"/>
+        <Button x:Name="prescribeBtn" Content="Prescribe" HorizontalAlignment="Left" Margin="403,522,0,0" VerticalAlignment="Top" Width="117" Height="42" FontFamily="MV Boli" FontSize="18" Background="#FF0868C3" Click="prescribeBtn_Click" IsEnabled="False"/>
+        <Button x:Name="updateBtn" Content="Update" HorizontalAlignment="Left" Margin="286,522,0,0" VerticalAlignment="Top" Width="117" Height="42" FontFamily="MV Boli" FontSize="18" Background="#FF08C339" Click="updateBtn_Click" Visibility="Hidden"/>
+        <Button x:Name="deleteBtn" Content="Delete" HorizontalAlignment="Left" Margin="520,522,0,0" VerticalAlignment="Top" Width="117" Height="42" FontFamily="MV Boli" FontSize="18" Background="#FFC33E08" Click="deleteBtn_Click" Visibility="Hidden"/>
 
     </Grid>
 </Window>

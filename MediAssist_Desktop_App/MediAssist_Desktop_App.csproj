@@ -78,6 +78,7 @@
     <Compile Include="Entity\Order.cs" />
     <Compile Include="Entity\Order_status.cs" />
     <Compile Include="Entity\Reg_status.cs" />
+    <Compile Include="Entity\Report.cs" />
     <Compile Include="Entity\Role.cs" />
     <Compile Include="LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
@@ -97,6 +98,7 @@
     <Compile Include="Model\NotesModel.cs" />
     <Compile Include="Model\OrdersModel.cs" />
     <Compile Include="Model\Order_statusModel.cs" />
+    <Compile Include="Model\ReportsModel.cs" />
     <Compile Include="Sealed Class\EmailValidator.cs" />
     <Compile Include="Sealed Class\SaveToTxt.cs" />
     <Compile Include="Views\Admin\AboutUser.xaml.cs">

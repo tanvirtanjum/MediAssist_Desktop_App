@@ -357,6 +357,57 @@ namespace MediAssist_Desktop_App.Model
 			return table;
 		}
 
+		public List<Login> getCus()
+		{
+			List<Login> table = new List<Login>();
+			try
+			{
+
+
+				string query = "SELECT * FROM logins WHERE role = '5' AND access = '1' AND reg_status = '2';";
+
+				db.openConnection();
+				db.executeQuery(query);
+
+				var dr = db.cmd.ExecuteReader();
+
+				if (dr.HasRows)
+				{
+					while (dr.Read())
+					{
+						Login consumer = new Login();
+
+						consumer.ID = dr.GetInt32(0);
+						consumer.Username = dr.GetString(1);
+						consumer.Password = dr.GetString(2);
+						consumer.Role = dr.GetInt32(3);
+						consumer.Access = dr.GetInt32(4);
+						consumer.Reg_status = dr.GetInt32(5);
+						consumer.Email_id = dr.GetInt32(6);
+
+						EmailsModel em = new EmailsModel();
+
+						consumer.Email_obj = em.getInfoOnOpenConnection(consumer.Email_id);
+
+						table.Add(consumer);
+					}
+				}
+
+				else
+				{
+					db.closeConnection();
+				}
+
+				db.closeConnection();
+			}
+
+			catch (Exception ex)
+			{
+
+			}
+			return table;
+		}
+
 
 		public bool acccptAllConsumers()
 		{
