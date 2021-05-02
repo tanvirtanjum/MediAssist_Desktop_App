@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 W:\CODES\C#\MediAssist_Desktop_App\MediAssist_Desktop_App\App.xaml
-30487915708
+312092657665
 
-75-1071443852
+76-506076812
 14-788570704
-LoginView.xaml;Views\Admin\AboutUser.xaml;Views\Admin\AdminDash.xaml;Views\Admin\ConsumersManagement.xaml;Views\Admin\EmployeeManagement.xaml;Views\Admin\FeedbackView.xaml;Views\Admin\NotesWindow.xaml;Views\Admin\RegistrationManagement.xaml;Views\Consumer\AboutUser.xaml;Views\Consumer\AppointmentView.xaml;Views\Consumer\ConsumerDash.xaml;Views\Consumer\HistoryView.xaml;Views\Consumer\NotesWindow.xaml;Views\Consumer\PrescriptionView.xaml;Views\Consumer\ShopView.xaml;Views\DeliveryMan\AboutUser.xaml;Views\DeliveryMan\DeliveryManDash.xaml;Views\DeliveryMan\NotesWindow.xaml;Views\DeliveryMan\ShipmentsView.xaml;Views\Doctor\AboutUser.xaml;Views\Doctor\AppointmentView.xaml;Views\Doctor\DoctorDash.xaml;Views\Doctor\NotesWindow.xaml;Views\Doctor\ReportsView.xaml;Views\Manager\AboutUser.xaml;Views\Manager\ManagerDash.xaml;Views\Manager\MedicineManagement.xaml;Views\Manager\NotesWindow.xaml;Views\Manager\PendingOrders.xaml;Views\Manager\ShipmentsView.xaml;
+LoginView.xaml;Views\Admin\AboutUser.xaml;Views\Admin\AdminDash.xaml;Views\Admin\ConsumersManagement.xaml;Views\Admin\EmployeeManagement.xaml;Views\Admin\FeedbackView.xaml;Views\Admin\NotesWindow.xaml;Views\Admin\RegistrationManagement.xaml;Views\Consumer\AboutUser.xaml;Views\Consumer\AppointmentView.xaml;Views\Consumer\ConsumerDash.xaml;Views\Consumer\HistoryView.xaml;Views\Consumer\NotesWindow.xaml;Views\Consumer\PrescriptionView.xaml;Views\Consumer\RegistrationWindow.xaml;Views\Consumer\ShopView.xaml;Views\DeliveryMan\AboutUser.xaml;Views\DeliveryMan\DeliveryManDash.xaml;Views\DeliveryMan\NotesWindow.xaml;Views\DeliveryMan\ShipmentsView.xaml;Views\Doctor\AboutUser.xaml;Views\Doctor\AppointmentView.xaml;Views\Doctor\DoctorDash.xaml;Views\Doctor\NotesWindow.xaml;Views\Doctor\ReportsView.xaml;Views\Manager\AboutUser.xaml;Views\Manager\ManagerDash.xaml;Views\Manager\MedicineManagement.xaml;Views\Manager\NotesWindow.xaml;Views\Manager\PendingOrders.xaml;Views\Manager\ShipmentsView.xaml;
 
 True
 

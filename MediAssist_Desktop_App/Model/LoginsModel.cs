@@ -214,7 +214,7 @@ namespace MediAssist_Desktop_App.Model
 			Int32 id = 0;
 
 
-			string query = "INSERT INTO logins OUTPUT INSERTED.id VALUES('" + login.Username + "', '1234', '"+login.Role+"', '1', '2', '"+login.Email_id+"');";
+			string query = "INSERT INTO logins OUTPUT INSERTED.id VALUES('" + login.Username + "', '"+login.Password+"', '"+login.Role+"', '"+login.Access+"', '"+login.Reg_status+"', '"+login.Email_id+"');";
 
 			if (email_id != 0)
 			{
@@ -462,7 +462,7 @@ namespace MediAssist_Desktop_App.Model
 
 		public bool acccptAllConsumers()
 		{
-			string query = "UPDATE logins SET reg_status = '2' WHERE reg_status = '1';";
+			string query = "UPDATE logins SET reg_status = '2', access = '1' WHERE reg_status = '1' AND role = '5';";
 
 			try
 			{
@@ -482,7 +482,7 @@ namespace MediAssist_Desktop_App.Model
 
 		public bool acccptConsumer(int id)
 		{
-			string query = "UPDATE logins SET reg_status = '2' WHERE reg_status = '1' AND id = '"+id+"';";
+			string query = "UPDATE logins SET reg_status = '2', access = '1' WHERE reg_status = '1' AND id = '" + id+"';";
 
 			try
 			{

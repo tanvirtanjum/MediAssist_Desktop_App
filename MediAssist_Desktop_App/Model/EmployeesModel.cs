@@ -136,6 +136,7 @@ namespace MediAssist_Desktop_App.Model
 			return table;
 		}
 
+
 		public int insertEmployee(Employee employee, Login login, Email email)
 		{
 			LoginsModel lm = new LoginsModel();

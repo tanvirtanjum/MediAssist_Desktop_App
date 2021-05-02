@@ -159,7 +159,9 @@ namespace MediAssist_Desktop_App
 
         private void registerBTN_Click(object sender, RoutedEventArgs e)
         {
-
+            RegistrationWindow rw = new RegistrationWindow();
+            rw.Show();
+            this.Close();
         }
     }
 }

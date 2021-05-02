@@ -294,6 +294,9 @@ namespace MediAssist_Desktop_App.Views.Admin
                 Login logInsert = new Login();
                 logInsert.Username = username;
                 logInsert.Role = designation;
+                logInsert.Password = "1234";
+                logInsert.Reg_status = 2;
+                logInsert.Access = 1;
 
                 Email emInsert = new Email();
                 emInsert.Mail = email;
@@ -307,7 +310,7 @@ namespace MediAssist_Desktop_App.Views.Admin
                 }
                 else
                 {
-                    MessageBox.Show("Error:\nEmployee Added.");
+                    MessageBox.Show("Employee Added.");
                     refreshBtn_Click(sender, e);
                 }
             }

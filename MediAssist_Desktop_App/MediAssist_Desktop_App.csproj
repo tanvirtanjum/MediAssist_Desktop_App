@@ -141,6 +141,9 @@
     <Compile Include="Views\Consumer\PrescriptionView.xaml.cs">
       <DependentUpon>PrescriptionView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Consumer\RegistrationWindow.xaml.cs">
+      <DependentUpon>RegistrationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Consumer\ShopView.xaml.cs">
       <DependentUpon>ShopView.xaml</DependentUpon>
     </Compile>
@@ -212,6 +215,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="DB Backup\MediAssistDB.bak" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -274,6 +278,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Consumer\PrescriptionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Consumer\RegistrationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -467,6 +475,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\Consumer\ConsumerAppointmentIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Consumer\Login Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Consumer\RegistrationBackground.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

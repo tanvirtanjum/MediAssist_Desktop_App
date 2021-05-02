@@ -191,5 +191,40 @@ namespace MediAssist_Desktop_App.Model
 			}
 
 		}
+
+		public int insertConsumer(Consumers consumer, Login login, Email email)
+		{
+			LoginsModel lm = new LoginsModel();
+			int login_id = lm.insertUser(login, email);
+
+			consumer.Login_id = login_id;
+
+			Int32 id = 0;
+
+
+			string query = "INSERT INTO consumers OUTPUT INSERTED.id VALUES('" + consumer.Name + "', '" + consumer.Occupation + "', '" + consumer.Blood_group + "', '" + consumer.Phone + "', '" + consumer.Login_id + "');";
+
+			if (login_id != 0)
+			{
+				try
+				{
+					db.openConnection();
+					id = (Int32)db.executeScaler(query);
+					db.closeConnection();
+
+					return id;
+				}
+
+				catch (Exception ex)
+				{
+					return id;
+				}
+			}
+
+			else
+			{
+				return id;
+			}
+		}
 	}
 }
