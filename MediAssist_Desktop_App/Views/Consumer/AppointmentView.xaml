@@ -65,5 +65,38 @@
                 <ImageBrush ImageSource="ConsumerAppointmentIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
+        <DataGrid x:Name="appointmentsDG" IsReadOnly="True" HorizontalAlignment="Left" Height="579" Margin="975,142,-0.4,-0.2" VerticalAlignment="Top" Width="419" FontSize="14" ColumnWidth="Auto" BorderBrush="Black" Background="#FF9C9C9C" MouseDoubleClick="load_data">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF1E7C00"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <ComboBox x:Name="sortCB" HorizontalAlignment="Left" Margin="975,78,0,0" VerticalAlignment="Top" Width="416" Height="64" SelectionChanged="sortCB_SelectionChanged" FontFamily="MV Boli" FontSize="18"/>
+        <Label Content="Selected Doctor" HorizontalAlignment="Left" Margin="215,297,0,0" VerticalAlignment="Top" Height="59" Width="217" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="docTB" HorizontalAlignment="Left" Height="59" Margin="431,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="539" FontFamily="MV Boli" FontSize="18" AcceptsReturn="True" IsReadOnly="True"/>
+        <Label Content="Issue:" HorizontalAlignment="Left" Margin="215,376,0,0" VerticalAlignment="Top" Height="59" Width="154" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="issueTB" HorizontalAlignment="Left" Height="204" Margin="369,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601" FontFamily="MV Boli" FontSize="18" AcceptsReturn="True" IsReadOnly="False"/>
+        <Label Content="Meeting Date:" HorizontalAlignment="Left" Margin="215,595,0,0" VerticalAlignment="Top" Height="59" Width="154" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="dateTB" HorizontalAlignment="Left" Height="59" Margin="369,595,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="507" FontFamily="MV Boli" FontSize="18"/>
+        <Button x:Name="rejectBtn" Content="Cancel" HorizontalAlignment="Left" Margin="429,668,0,0" VerticalAlignment="Top" Width="113" Height="42" FontFamily="MV Boli" FontSize="18" Background="#FFC83807"  Visibility="Hidden" IsEnabled="False" Click="rejectBtn_Click" />
+        <Button x:Name="refreshBtn" Content="Refresh" HorizontalAlignment="Left" Margin="659,668,0,0" VerticalAlignment="Top" Width="113" Height="42" FontFamily="MV Boli" FontSize="18" Background="#FF0771C8" Visibility="Hidden" Click="refreshBtn_Click"/>
+        <Button x:Name="appointBtn" Content="Request" HorizontalAlignment="Left" Margin="544,669,0,0" VerticalAlignment="Top" Width="113" Height="42" FontFamily="MV Boli" FontSize="18" Background="#FF4AC807" Visibility="Visible" IsEnabled="False" Click="appointBtn_Click"/>
+        <DataGrid x:Name="docDG" IsReadOnly="True" HorizontalAlignment="Left" Height="179" Margin="216,113,0,0" VerticalAlignment="Top" Width="754" FontSize="14" ColumnWidth="Auto" BorderBrush="Black" Background="#FF9C9C9C" MouseDoubleClick="load_doc_data" IsEnabled="True">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF1E7C00"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Label Content="                                   Select Doctor" HorizontalAlignment="Left" Margin="215,78,0,0" VerticalAlignment="Top" Height="35" Width="755" Background="#FF2276A2" FontFamily="MV Boli" FontSize="18"/>
     </Grid>
 </Window>

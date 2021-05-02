@@ -22,11 +22,17 @@ namespace MediAssist_Desktop_App.Views.Consumer
     public partial class PrescriptionView : Window
     {
         Login session;
+
+        List<Report> table = null;
+
+        Report loaded_report = null;
         public PrescriptionView(Login user)
         {
             InitializeComponent();
 
             session = user;
+
+            LoadTableReports();
         }
 
         /*ROUTES -- CONSUMERS*/
@@ -93,5 +99,49 @@ namespace MediAssist_Desktop_App.Views.Consumer
 
         //End
         /*ROUTES -- CONSUMERS*/
+
+
+        private void LoadTableReports()
+        {
+            ReportsModel rm = new ReportsModel();
+
+            table = rm.getTableForConsumer(session.ID);
+
+            if (table == null) { }
+
+            else
+            {
+                int Sl = 0;
+                reportDG.ItemsSource = table.Select(i => new { Sl = table.IndexOf(i) + 1, Subject = i.Subject, Doctor = i.Login_obj_cus.Username, Email = i.Login_obj_cus.Email_obj.Mail });
+            }
+        }
+
+        private void load_data(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                var currentRowIndex = reportDG.Items.IndexOf(reportDG.CurrentItem);
+
+                loaded_report = table[currentRowIndex];
+
+                subjectTB.Text = loaded_report.Subject;
+                reportTB.Text = loaded_report.Report_txt;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("NO DATA.");
+            }
+        }
+
+        private void refreshBtn_Click(object sender, RoutedEventArgs e)
+        {
+            subjectTB.Text = "";
+            reportTB.Text = "";
+
+            loaded_report = null;
+           
+            LoadTableReports();
+        }
     }
 }

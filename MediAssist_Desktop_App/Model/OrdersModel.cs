@@ -169,6 +169,66 @@ namespace MediAssist_Desktop_App.Model
 			return table;
 		}
 
+		public List<Order> getOrdersForConsumer(int id, int status)
+		{
+			List<Order> table = new List<Order>(); //order_status
+
+			string query = "";
+
+			if (status <= 0)
+			{
+				query = "SELECT * FROM orders WHERE order_by = '" + id + "' ORDER BY order_status;";
+			}
+			else
+			{
+				query = "SELECT * FROM orders WHERE order_status = '" + status + "' AND order_by = '" + id + "';";
+			}
+
+
+
+			db.openConnection();
+			db.executeQuery(query);
+
+			var dr = db.cmd.ExecuteReader();
+
+			if (dr.HasRows)
+			{
+				while (dr.Read())
+				{
+					Order order = new Order();
+
+					order.ID = dr.GetInt32(0);
+					order.Cart_key_id = dr.GetInt32(1);
+					order.Order_status = dr.GetInt32(2);
+					order.Delivery_man = dr.GetInt32(3);
+					order.Order_by = dr.GetInt32(4);
+
+
+					LoginsModel lm = new LoginsModel();
+					Order_statusModel osm = new Order_statusModel();
+					CartsModel cm = new CartsModel();
+
+					order.Login_obj_emp = lm.getInfoOnOpenConnection(order.Delivery_man);
+					order.Login_obj_cus = lm.getInfoOnOpenConnection(order.Order_by);
+
+					order.Order_status_obj = osm.getInfoOnOpenConnection(order.Order_status);
+
+					order.Items = cm.getCartsForOrder(order.Cart_key_id);
+
+					table.Add(order);
+				}
+			}
+
+			else
+			{
+				db.closeConnection();
+			}
+
+			db.closeConnection();
+
+			return table;
+		}
+
 		public bool UpdateOrderStatus(Order order)
 		{
 			string query = "UPDATE orders SET order_status = '" + order.Order_status + "', delivery_man = '" + order.Delivery_man + "' WHERE id = '" + order.ID + "';";
@@ -178,6 +238,28 @@ namespace MediAssist_Desktop_App.Model
 				db.openConnection();
 				db.executeQuery(query);
 				db.closeConnection();
+
+				return true;
+			}
+
+			catch (Exception ex)
+			{
+				return false;
+			}
+		}
+
+		public bool addOrder(Order order)
+		{
+
+
+			string query = "INSERT INTO orders VALUES('" + order.Cart_key_id + "', '" + order.Order_status + "', '" + order.Delivery_man + "', '" + order.Order_by + "');";
+
+			try
+			{
+				db.openConnection();
+				db.executeQuery(query);
+				db.closeConnection();
+
 
 				return true;
 			}

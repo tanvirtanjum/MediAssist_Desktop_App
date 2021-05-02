@@ -65,6 +65,21 @@
                 <ImageBrush ImageSource="ConsumerAppointmentIcon.png" Stretch="Uniform"/>
             </Label.Background>
         </Label>
+        <DataGrid x:Name="orderDG" IsReadOnly="True" HorizontalAlignment="Left" Height="568" Margin="792,153,-0.4,-0.2" VerticalAlignment="Top" Width="602" FontSize="14" ColumnWidth="Auto" BorderBrush="Black" Background="#FF9C9C9C" MouseDoubleClick="load_data">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF1E7C00"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <TextBox x:Name="detailsTB" HorizontalAlignment="Left" AcceptsReturn="True" Height="556" Margin="215,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="577" FontFamily="MV Boli" FontSize="18" IsReadOnly="True"/>
+        <Button x:Name="refreshBtn" Content="Refresh" HorizontalAlignment="Left" Margin="215,634,0,-0.2" VerticalAlignment="Top" Width="269" Height="87" FontFamily="MV Boli" FontSize="36" Background="#FF2FCAD3" BorderBrush="#FF2FCAD3" OpacityMask="#FF2FCAD3" Click="refreshBtn_Click" Visibility="Hidden"/>
+        <ComboBox x:Name="sortCB" HorizontalAlignment="Left" Margin="792,78,0,0" VerticalAlignment="Top" Width="592" Height="75" FontFamily="MV Boli" FontSize="18" SelectionChanged="sortCB_SelectionChanged"/>
+        <Button x:Name="cancelBtn" Content="Cancel" HorizontalAlignment="Left" Margin="523,634,0,-0.2" VerticalAlignment="Top" Width="269" Height="87" FontFamily="MV Boli" FontSize="36" Background="#FFD32F3B" BorderBrush="#FF2FCAD3" OpacityMask="#FF2FCAD3" Click="cancelBtn_Click" IsEnabled="False" Visibility="Hidden"/>
     </Grid>
 </Window>
 

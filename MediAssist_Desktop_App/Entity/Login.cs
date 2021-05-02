@@ -16,6 +16,8 @@ namespace MediAssist_Desktop_App.Entity
         int reg_status;
         int email_id;
 
+        int cart_id;
+
         Role role_obj;
         Access access_obj;
         Reg_status reg_Status_obj;
@@ -65,6 +67,12 @@ namespace MediAssist_Desktop_App.Entity
         {
             get { return email_id; }
             set { email_id = value; }
+        }
+
+        public int Cart_id
+        {
+            get { return cart_id; }
+            set { cart_id = value; }
         }
 
         public Role Role_obj

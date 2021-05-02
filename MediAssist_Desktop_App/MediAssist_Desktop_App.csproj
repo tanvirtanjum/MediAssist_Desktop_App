@@ -101,6 +101,7 @@
     <Compile Include="Model\ReportsModel.cs" />
     <Compile Include="Sealed Class\EmailValidator.cs" />
     <Compile Include="Sealed Class\SaveToTxt.cs" />
+    <Compile Include="Sealed Class\TokenGenerator.cs" />
     <Compile Include="Views\Admin\AboutUser.xaml.cs">
       <DependentUpon>AboutUser.xaml</DependentUpon>
     </Compile>

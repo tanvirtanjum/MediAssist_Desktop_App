@@ -214,7 +214,7 @@ namespace MediAssist_Desktop_App.Views.DeliveryMan
 
                 }
 
-                MessageBox.Show("Order Cancelled.");
+                MessageBox.Show("Order Returned.");
 
                 refreshBtn_Click(sender, e);
             }

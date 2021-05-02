@@ -19,6 +19,7 @@ using MediAssist_Desktop_App.Views.Manager;
 using MediAssist_Desktop_App.Views.DeliveryMan;
 using MediAssist_Desktop_App.Views.Doctor;
 using MediAssist_Desktop_App.Views.Consumer;
+using MediAssist_Desktop_App.Sealed_Class;
 
 namespace MediAssist_Desktop_App
 {
@@ -118,6 +119,10 @@ namespace MediAssist_Desktop_App
                         if (user.Role == 5)
                         {
                             session = user;
+
+                            TokenGenerator tg = new TokenGenerator();
+                            session.Cart_id = tg.token(session.ID);
+
                             //Open Consumer Dash
                             ConsumerDash cd = new ConsumerDash(session);
                             cd.Show();
